@@ -50,9 +50,7 @@ body:
         1. Update labels
         - priority -- is this coursework key, mandatory, or stretch?
         - size -- help trainees plan their time with rough estimation
-        2. Add to milestone
-        - week 1,2,3,4
-        3. Add to project backlog
+        2. Add to project backlog
         - add to the project named the same as this repo
         - fill in custom fields -- priority, size, hours -- to match this issue
 
