@@ -1,6 +1,6 @@
 # My Book Library
 
-## topics: debugging, DOM
+## topics: debugging, DOM
 
 My website should be able to:
 
