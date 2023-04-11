@@ -1,0 +1,15 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline;
+    max-width: 20%;
+  }
+  
+  img {
+    width: 100%;
+    border: 3px solid pink;
+  }
