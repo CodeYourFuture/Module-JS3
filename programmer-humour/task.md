@@ -1,4 +1,4 @@
-# Programmer humor
+# Programmer humour
 
 Who knew programmers could be funny?
 
