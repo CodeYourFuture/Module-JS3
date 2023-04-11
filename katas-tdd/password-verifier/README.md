@@ -1,6 +1,6 @@
 # Password verifier
 
-Using TDD, write a function that checks a password follows the below series of rules.
+Using TDD, write a function that checks if a password follows the below series of rules.
 
 ## Before you start
 
