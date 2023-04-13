@@ -4,9 +4,9 @@ We can use destructuring to extract values from an object and assign them to var
 
 ```js
 let person = {
-    firstName: "Bruce",
-    lastName: "Wayne"
-}
+  firstName: "Bruce",
+  lastName: "Wayne",
+};
 
 let { firstName, lastName } = person;
 
