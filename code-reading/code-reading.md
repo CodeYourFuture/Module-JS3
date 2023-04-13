@@ -20,7 +20,7 @@ Explain why line 4 and line 6 output different numbers.
 
 Take a look at the following code:
 
-```
+```js
 let x = 10
 
 function f1()
@@ -39,7 +39,7 @@ What will be the output of this code. Explain your answer in 50 words or less.
 
 Take a look at the following code:
 
-```
+```js
 const x = 9;
 
 function f1(val) {
