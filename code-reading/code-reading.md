@@ -21,16 +21,15 @@ Explain why line 4 and line 6 output different numbers.
 Take a look at the following code:
 
 ```js
-let x = 10
+let x = 10;
 
-function f1()
-{
-    console.log(x)
-    let y = 20
+function f1() {
+  console.log(x);
+  let y = 20;
 }
 
-console.log(f1())
-console.log(y)
+console.log(f1());
+console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
