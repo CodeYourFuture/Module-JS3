@@ -38,7 +38,7 @@ function submit() {
     return false;
   } else {
     let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    myLibrary.push(book);
     render();
   }
 }
