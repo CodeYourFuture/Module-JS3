@@ -70,3 +70,37 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function studentsOfGryffindor (hogwarts) {
+  let studentsOfGryffindor = [];
+  for ( let student of hogwarts) {
+    if (student.house === "Gryffindor") {
+      studentsOfGryffindor.push(`${student.firstName} ${student.lastName}`);
+    }
+  }
+  return studentsOfGryffindor
+  // return hogwarts.map(person => person.filter(person => person.house === "Gryffindor"))
+}
+console.log(studentsOfGryffindor(hogwarts))
+
+function teachersWhoHavePets (hogwarts) {
+  let teachersWhoHavePets = [];
+  for (let teacher of hogwarts) {
+    if (teacher.occupation === "Teacher" && teacher.pet !== null) {
+      teachersWhoHavePets.push(`${teacher.firstName} ${teacher.lastName}`);
+    }
+  }
+  return teachersWhoHavePets
+}
+console.log(teachersWhoHavePets(hogwarts))
+
+//ex 1
+// Harry Potter
+// Ron Weasley
+// Hermione Granger
+// Minerva McGonagall
+// Albus Dumbledore
+
+// ex 2
+
+// Albus Dumbledore
