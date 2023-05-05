@@ -21,6 +21,6 @@ a different greeting should be displayed in the box.
 ///////////// HELP!! Getting error saying: "CORS policy: No 'Access-Control-Allow-Origin'" ////////////
 
 
-fetch("https://codeyourfuture.herokuapp.com/api/greetings")
+fetch("https://www.greetingsapi.com/random")
   .then(response => response.text())
   .then(greeting => document.getElementById("greeting-text").innerHTML = greeting)
