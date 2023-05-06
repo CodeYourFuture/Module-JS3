@@ -1,0 +1,7 @@
+#comic-container {
+    text-align: center;
+}
+
+#comic-container img {
+    max-width: 100%;
+}
