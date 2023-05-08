@@ -37,24 +37,24 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    let book = new Book(title.value, author.value, pages.value, check.checked);
+    myLibrary.push(book);
     render();
   }
 }
 
-function Book(title, author, pages, check) {
+function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.check = check;
+  this.read = read;
 }
 
 function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n-- {
+  for (let n = rowsNumber - 1; n > 0; n--) {
     table.deleteRow(n);
   }
   //insert updated row and cells
@@ -76,7 +76,7 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
+    if (myLibrary[i].read === false) {
       readStatus = "Yes";
     } else {
       readStatus = "No";
@@ -84,12 +84,12 @@ function render() {
     changeBut.innerHTML = readStatus;
 
     changeBut.addEventListener("click", function () {
-      myLibrary[i].check = !myLibrary[i].check;
+      myLibrary[i].read = !myLibrary[i].read;
       render();
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
+    let delBut = document.createElement("button");
     delBut.id = i + 5;
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
