@@ -16,7 +16,7 @@ Expected result
 Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
-
+//hello
 fetch("*** Write the API address here ***")
   .then(function (response) {
     return response.text();
