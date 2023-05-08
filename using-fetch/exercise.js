@@ -18,8 +18,6 @@ a different greeting should be displayed in the box.
 */
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-
 fetch("https://www.greetingsapi.com/random")
   .then(function (response) {
     return response.json();
@@ -31,8 +29,3 @@ fetch("https://www.greetingsapi.com/random")
     let greetingPEl = document.getElementById("greeting-text");
     greetingPEl.textContent= `${data.greeting}! That's hello in ${data.language}!`;
   });
-
-// }
-// });
-
-// greetingFunction ();
