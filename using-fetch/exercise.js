@@ -19,13 +19,18 @@ a different greeting should be displayed in the box.
 
 
  
- fetch("https://codeyourfuture.herokuapp.com/api/greetings")
+  
+  fetch("https://codeyourfuture.herokuapp.com/api/greetings")
   .then(function (response) {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
     return response.json();
   })
   .then(function (greeting) {
     document.getElementById("greeting-text").innerText = greeting;
+  })
+  .catch(function (error) {
+    console.error("Something went wrong:", error);
+     
   });
-
-  
-                 
