@@ -70,3 +70,10 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+let { firstName, lastName, house, pet, occupation } = hogwarts;
+
+for (const { firstName, lastName, house } of hogwarts) {
+  if (house === "Gryffindor") {
+    console.log(firstName, lastName);
+  }
+}
