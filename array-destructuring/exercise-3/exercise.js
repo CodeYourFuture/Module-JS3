@@ -6,3 +6,23 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+function orderList(list) {
+  console.log(
+   ` QTY     ITEM                            TOTAL`
+  );
+let totalNumber = 0;
+  list.forEach(oneOrder => {
+    const {itemName, quantity, unitPrice} = oneOrder;
+     let total = (Math.round( quantity*unitPrice * 100) / 100).toFixed(2);
+     console.log(
+      `${quantity.toString().padEnd(9)}${itemName.padEnd(30)}${total.padStart(6)}`
+      //`${quantity}     ${itemName}                 ${total}`
+       
+     );
+     totalNumber += Number(total); 
+  });
+  
+  console.log(`Total:${totalNumber.toFixed(2)}`);
+}
+
+orderList(order);
