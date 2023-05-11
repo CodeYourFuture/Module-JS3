@@ -28,4 +28,7 @@ fetch("https://www.greetingsapi.com/random")
     
     let greetingPEl = document.getElementById("greeting-text");
     greetingPEl.textContent= `${data.greeting}! That's hello in ${data.language}!`;
-  });
+  })
+  .catch((error) => console.log(error));
+
+
