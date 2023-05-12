@@ -1,5 +1,8 @@
 {
   "name": "module-js3",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "version": "1.0.0",
   "description": "Like learning a musical instrument, programming requires daily practice.",
   "main": "index.js",
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/CodeYourFuture/Module-JS3#readme",
   "devDependencies": {
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "prettier": "^2.8.7"
   }
 }

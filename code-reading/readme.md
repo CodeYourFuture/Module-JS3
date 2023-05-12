@@ -37,6 +37,7 @@ console.log(y);
 What will be the output of this code. Explain your answer in 50 words or less.
 
 y is not defined outside the function and the function does not return this value, so the output will be "10" and an error
+
 ## Question 3
 
 Take a look at the following code:
@@ -50,7 +51,7 @@ function f1(val) {
 }
 
 f1(x);
-console.log(x);  //9 as variable is const its value can't be changed
+console.log(x); //9 as variable is const its value can't be changed
 
 const y = { x: 9 };
 
