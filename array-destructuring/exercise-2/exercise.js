@@ -70,3 +70,26 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+//return names who have house with name Gryffindor
+function returnName(persons) {
+  persons.forEach(person => {
+    const {firstName ,lastName ,house } = person;
+    if(house === "Gryffindor"){
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+returnName(hogwarts);
+
+//return  Teacher names who dont have pet
+function returnTeacherName(persons) {
+  persons.forEach(person => {
+    const {firstName ,lastName ,house, pet, occupation } = person;
+    if(pet !== null && occupation ==="Teacher"){
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+returnTeacherName(hogwarts);
