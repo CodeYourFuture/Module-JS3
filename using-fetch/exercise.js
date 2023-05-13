@@ -17,6 +17,7 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
+<<<<<<< Updated upstream
 /*
 fetch("*** Write the API address here ***")
   .then(function (response) {
@@ -48,3 +49,21 @@ fetch("*** Write the API address here ***")
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
   });
+=======
+
+function getGreeting() {
+  fetch("https://codeyourfuture.herokuapp.com/api/greetings")
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(greeting) {
+      const greetingText = document.getElementById("greeting-text");
+      greetingText.innerHTML = greeting;
+    })
+    .catch(function(error) {
+      console.error("Error fetching greeting:", error);
+    });
+}
+
+getGreeting();
+>>>>>>> Stashed changes
