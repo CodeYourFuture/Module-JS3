@@ -11,6 +11,8 @@ test("Car sales", function () {
     { make: "Ford", model: "Fiesta", colour: "Green", price: 2000 },
   ];
 
+ 
+
   let totals = {
     Ford: 22999,
     Honda: 8000,

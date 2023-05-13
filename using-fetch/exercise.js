@@ -17,7 +17,7 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch("*** Write the API address here ***")
+fetch("https://codeyourfuture.herokuapp.com/api/greeting")
   .then(function (response) {
     return response.text();
   })
