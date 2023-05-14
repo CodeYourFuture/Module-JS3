@@ -70,3 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const gryffindorMembers = hogwarts.filter(({ house }) => house === "Gryffindor");
+const gryffindorNames = gryffindorMembers.map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+
+console.log(gryffindorNames);
+
+const teacherWithPets = hogwarts.filter(({ occupation, pet }) => occupation === "Teacher" && pet !== null);
+const teacherNames = teacherWithPets.map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+
+console.log(teacherNames);
+
+

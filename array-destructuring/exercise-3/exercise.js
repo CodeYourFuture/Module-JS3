@@ -6,3 +6,12 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+let totalCost = 0;
+
+order.forEach(({ itemName, quantity, unitPrice }) => {
+  const itemTotal = quantity * unitPrice;
+  totalCost += itemTotal;
+  console.log(`${itemName} x ${quantity} - $${itemTotal.toFixed(2)}`);
+});
+
+console.log(`Total cost: $${totalCost.toFixed(2)}`);
