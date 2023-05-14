@@ -6,3 +6,23 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function createRow(value, width) {
+  return value.toString().padEnd(width, " ");
+}
+function printRow(quantity, itemName, unitPrice) {
+  console.log(
+    `${createRow(quantity, 7)}${createRow(itemName, 20)}${unitPrice}`
+  );
+}
+function printOrder(orderArr) {
+  let total = 0;
+  printRow("QTY", "ITEM", "TOTAL");
+  for (let { itemName, quantity, unitPrice } of orderArr) {
+    printRow(quantity, itemName, (unitPrice * quantity).toFixed(2));
+    total += unitPrice * quantity;
+  }
+  console.log(`\nTOTAL: ${total}`);
+}
+
+printOrder(order);
