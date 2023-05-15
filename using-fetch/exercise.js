@@ -25,5 +25,5 @@ fetch("https://www.greetingsapi.com/random")
     let greetMessage = document.querySelector("#greeting-text");
     greetMessage.innerText = `Hello: ${greeting.greeting}`;
     greetMessage.innerText += `\nLanguage: ${greeting.language}`;
-    // Write the code to display the greeting text here
+    
   });
