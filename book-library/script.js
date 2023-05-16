@@ -37,13 +37,14 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    let book = new Book (title.value, title.value, pages.value, check.checked);
+    myLibrary.push(book);
     render();
   }
+  console.log(myLibrary)
 }
 
-function Book(title, author, pages, check) {
+function Book (title, author, pages, check) {
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -53,9 +54,10 @@ function Book(title, author, pages, check) {
 function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
+  console.log("rowsNumber", rowsNumber)
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n-- {
-    table.deleteRow(n);
+  for (let i = rowsNumber - 1; i > 0; i--) {
+    table.deleteRow(i);
   }
   //insert updated row and cells
   let length = myLibrary.length;
@@ -76,11 +78,11 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
-      readStatus = "Yes";
-    } else {
-      readStatus = "No";
-    }
+      if (myLibrary[i].check == false) {
+        readStatus = "No";
+      } else {
+        readStatus = "Yes";
+      }
     changeBut.innerHTML = readStatus;
 
     changeBut.addEventListener("click", function () {
@@ -90,11 +92,11 @@ function render() {
 
     //add delete button to every row and render again
     let delButton = document.createElement("button");
-    delBut.id = i + 5;
-    cell5.appendChild(delBut);
-    delBut.className = "btn btn-warning";
-    delBut.innerHTML = "Delete";
-    delBut.addEventListener("clicks", function () {
+    delButton.id = i +5 ;
+    cell5.appendChild(delButton);
+    delButton.className = "btn btn-warning";
+    delButton.innerHTML = "Delete";
+    delButton.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
