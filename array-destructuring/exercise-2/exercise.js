@@ -70,3 +70,30 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+// the names of people who are in Griffindor
+
+function executeTheNames(arrayOfObj){
+  let filteredNames = arrayOfObj.filter((singleObject)=>{
+    let {firstName, lastName, house} = singleObject
+    if(house == "Gryffindor" ){
+      console.log(`${firstName} ${lastName}`)
+    }
+  })
+  return filteredNames
+}
+
+// executeTheNames(hogwarts)
+
+ // the name of teachers who have pet 
+
+ function getTheNamesOfTeachers(arrayOfObj){
+  let filteredTeachers = arrayOfObj.filter((singleObject)=>{
+    let {firstName, lastName, pet, occupation} = singleObject
+    if(pet !== null && occupation === "Teacher"){
+      console.log(firstName, lastName)
+    }
+  })
+  return filteredTeachers
+ }
+
+ getTheNamesOfTeachers(hogwarts)
