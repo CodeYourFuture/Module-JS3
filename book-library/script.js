@@ -41,7 +41,6 @@ function submit() {
     myLibrary.push(book);
     render();
   }
-  console.log(myLibrary)
 }
 
 function Book (title, author, pages, check) {
