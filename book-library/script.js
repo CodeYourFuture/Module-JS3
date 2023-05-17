@@ -37,24 +37,24 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    let book = new Book(title.value, author.value, pages.value, check.checked);
+    myLibrary.push(book);
     render();
   }
 }
 
-function Book(title, author, pages, check) {
+function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.check = check;
+  this.read = read;
 }
 
 function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n-- {
+  for (let n = rowsNumber - 1; n > 0; n--) {
     table.deleteRow(n);
   }
   //insert updated row and cells
@@ -71,30 +71,30 @@ function render() {
     cell3.innerHTML = myLibrary[i].pages;
 
     //add and wait for action for read/unread button
-    let changeBut = document.createElement("button");
-    changeBut.id = i;
-    changeBut.className = "btn btn-success";
-    cell4.appendChild(changeBut);
+    let changeBtn = document.createElement("button");
+    changeBtn.id = i;
+    changeBtn.className = "btn btn-success";
+    cell4.appendChild(changeBtn);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
+    if (myLibrary[i].read === false) {
       readStatus = "Yes";
     } else {
       readStatus = "No";
     }
-    changeBut.innerHTML = readStatus;
+    changeBtn.innerHTML = readStatus;
 
-    changeBut.addEventListener("click", function () {
-      myLibrary[i].check = !myLibrary[i].check;
+    changeBtn.addEventListener("click", function () {
+      myLibrary[i].check = !myLibrary[i].read;
       render();
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
-    delBut.id = i + 5;
-    cell5.appendChild(delBut);
-    delBut.className = "btn btn-warning";
-    delBut.innerHTML = "Delete";
-    delBut.addEventListener("clicks", function () {
+    let delBtn = document.createElement("button");
+    delBtn.id = i + 5;
+    cell5.appendChild(delBtn);
+    delBtn.className = "btn btn-warning";
+    delBtn.innerHTML = "Delete";
+    delBtn.addEventListener("clicks", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
