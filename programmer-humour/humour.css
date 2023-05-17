@@ -1,0 +1,17 @@
+#container {
+    display: flex;
+justify-content: center;
+}
+
+.image{
+width: 20rem;
+margin: 50px 0;
+border: 2px brown solid;
+padding: 40px;
+border-radius: 20% 0% 20%/20% 0% 20%;
+transition:0.9s;
+}
+
+.image:hover {
+    background-color: black;
+}
