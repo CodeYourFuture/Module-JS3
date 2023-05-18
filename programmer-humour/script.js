@@ -7,13 +7,17 @@
 
 function humour() {
   return fetch("https://xkcd.now.sh/?comic=latest")
-    .then((response) => response.json())
-    .then((json) => console.log(JSON.stringify(json))) // data?
-    .then((response) => response.blob())
-    .then((blob) => {
-      const imageUrl = URL.createObjectURL(blob); /////// HELP! NOT WORKING! ///////
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error");
+      }
+    })
+    .then((json) => {
+      console.log(json);
       const imgElement = document.createElement("img");
-      imgElement.src = imageUrl;
+      imgElement.src = json.img;
       const imgContainer = document.getElementById("image-container");
       imgContainer.appendChild(imgElement);
     })
