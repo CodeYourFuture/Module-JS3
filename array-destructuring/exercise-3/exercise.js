@@ -16,7 +16,8 @@ let totalCost = 0;
 for (const { itemName, quantity, unitPrice } of order) {
   const itemTotal = quantity * unitPrice;
   totalCost += itemTotal;
-  console.log(`${quantity}\t${itemName}\t\t${itemTotal.toFixed(2)}`);
+  console.log(`${quantity}\t${itemName.padEnd(20)}${itemTotal.toFixed(2)}`);
+  
 }
 
 console.log(`\nTotal: ${totalCost.toFixed(2)}`);
