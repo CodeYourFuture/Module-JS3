@@ -70,9 +70,20 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
-console.log(
-  hogwarts
-    .filter(person => person.house === 'Gryffindor')
-    .map(person => person.firstName)
-);
 
+
+// Task 1: Display the names of people who belong to Gryffindor house
+console.log("Gryffindor House Members:");
+for (const { firstName, lastName, house } of hogwarts) {
+  if (house === "Gryffindor") {
+    console.log(`${firstName} ${lastName}`);
+  }
+}
+
+// Task 2: Display the names of teachers who have pets
+console.log("\nTeachers with Pets:");
+for (const { firstName, lastName, pet, occupation } of hogwarts) {
+  if (occupation === "Teacher" && pet !== null) {
+    console.log(`${firstName} ${lastName}`);
+  }
+}
