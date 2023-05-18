@@ -70,3 +70,9 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+console.log(
+  hogwarts
+    .filter(person => person.house === 'Gryffindor')
+    .map(person => person.firstName)
+);
+
