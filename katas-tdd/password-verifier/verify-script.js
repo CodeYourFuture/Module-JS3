@@ -2,7 +2,7 @@ function verify(password){
     if (!/\d/.test(password) || !password || password.length < 8){
         return "Password rejected"
     }
-    let simbols = []
+
     for (i=0; i<password.length; i++){
         if(password[i] === password[i].toUpperCase() ){
             return "Password accepted"
