@@ -70,3 +70,9 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+hogwarts.forEach(character => {
+  let {firstName, lastName, house} = character
+  if (house === "Gryffindor")
+  console.log(`${firstName} ${lastName}`)
+});
