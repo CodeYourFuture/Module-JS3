@@ -1,0 +1,8 @@
+#div_card {
+color:green;
+background-color: beige;
+transition: transform 0.3s ease-in-out;
+}
+
+.footer {font-size: 20px;
+}
