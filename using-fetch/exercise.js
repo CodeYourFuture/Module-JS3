@@ -22,4 +22,6 @@ fetch("https://www.greetingsapi.com/random")
     return response.text();
   })
   .then(function (greeting) {
+    let pElement = document.getElementById("greeting-text");
+    pElement.innerText = greeting;
   });
