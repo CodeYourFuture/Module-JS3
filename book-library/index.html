@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title> </title>
-    <meta
-      charset="utf-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/book-library/style.css" />
+    <title>Library</title>
   </head>
-
   <body>
     <div class="jumbotron text-center">
       <h1>Library</h1>
@@ -35,38 +31,33 @@
           class="form-control"
           id="title"
           name="title"
-          required
-        />
+          required />
         <label for="author">Author: </label>
         <input
           type="author"
           class="form-control"
           id="author"
           name="author"
-          required
-        />
+          required />
         <label for="pages">Pages:</label>
         <input
           type="number"
           class="form-control"
           id="pages"
           name="pages"
-          required
-        />
+          required />
         <label class="form-check-label">
           <input
             type="checkbox"
             class="form-check-input"
             id="check"
-            value=""
-          />Read
+            value="" />Read
         </label>
         <input
           type="submit"
           value="Submit"
           class="btn btn-primary"
-          onclick="submit();"
-        />
+          onclick="submit();" />
       </div>
     </div>
 
@@ -90,7 +81,6 @@
         </tr>
       </tbody>
     </table>
-
-    <script src="script.js"></script>
+    <script src="/book-library/script.js"></script>
   </body>
 </html>
