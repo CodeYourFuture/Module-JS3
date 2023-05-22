@@ -73,7 +73,7 @@ let hogwarts = [
 
 function belongToGryffindor(witch) {
   witch.forEach((el) => {
-    let { firstName, lastName, house, pet, occupation } = el
+    let { firstName, lastName, house } = el
     if (house === 'Gryffindor') {
       console.log(`${firstName} ${lastName}`)
     }
@@ -85,7 +85,7 @@ belongToGryffindor(hogwarts)
 //
 function teacherHasPets(witch) {
   witch.forEach((el) => {
-    let { firstName, lastName, house, pet, occupation } = el
+    let { firstName, lastName, pet, occupation } = el
     if (occupation ==='Teacher' && pet!= null) {
       console.log(`${firstName} ${lastName}`)
     }
