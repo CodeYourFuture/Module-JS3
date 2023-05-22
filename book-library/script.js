@@ -1,9 +1,17 @@
-let myLibrary = [];
+let title = document.querySelector("#title");
+let author = document.getElementById("author");
+let pages = document.getElementById("pages");
+let check = document.getElementById("check");
 
-window.addEventListener("load", function (e) {
+let myLibrary = [];
+let window
+if (window !== undefined){
+  window.addEventListener("load", function (e) {
   populateStorage();
   render();
 });
+}
+
 
 function populateStorage() {
   if (myLibrary.length == 0) {
@@ -20,10 +28,7 @@ function populateStorage() {
   }
 }
 
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const pages = document.getElementById("pages");
-const check = document.getElementById("check");
+
 
 //check the right input from forms and if its ok -> add the new book (object in array)
 //via Book function and start render function
@@ -37,7 +42,7 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book (title.value, title.value, pages.value, check.checked);
+    let book = new Book (title.value, author.value, pages.value, check.checked);
     myLibrary.push(book);
     render();
   }
