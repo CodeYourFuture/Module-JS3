@@ -10,7 +10,10 @@ function findSum(str){
       let sum = 0
       for (let item of newArray){
         if((parseInt(item))< 0){
-          throw new Error (`negatives not allowed: ${item}`)  
+          
+          const error = new Error(`negatives not allowed: ${item}`);
+          console.log(error)
+          return error
         }else if (! isNaN(item) && (parseInt(item))<1000 && (parseInt(item))>=0 ){
           sum += parseInt(item)
         } 
@@ -19,11 +22,13 @@ function findSum(str){
     }
 }
 
+findSum("3,5,6,7,-1")
 
 
 
 
-//tests
+
+tests
 
 test("When string is empty", () => {
   expect(findSum("")).toEqual(0);
@@ -42,5 +47,5 @@ test("ignore the numbers which bigger then 1000", () => {
 });
 
 test("If the numbers is negative", () => {
-  expect(findSum("6,5,-1")).toThrow(new Error("negatives not allowed: -1"));
+  expect(findSum("6,5,-1")).toThrow("negatives not allowed: -1");
 });
