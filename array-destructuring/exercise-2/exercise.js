@@ -81,3 +81,15 @@ function belongToGryffindor(witch) {
   
 }
 belongToGryffindor(hogwarts)
+//
+//
+function teacherHasPets(witch) {
+  witch.forEach((el) => {
+    let { firstName, lastName, house, pet, occupation } = el
+    if (occupation ==='Teacher' && pet!= null) {
+      console.log(`${firstName} ${lastName}`)
+    }
+  })
+}
+
+teacherHasPets(hogwarts)
