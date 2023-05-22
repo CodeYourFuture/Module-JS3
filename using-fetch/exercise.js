@@ -22,7 +22,6 @@ fetch("https://codeyourfuture.herokuapp.com/api/greetings")
     return response.text();
   })
   .then(function (greeting) {
-    console.log(greeting)
     const greet = document.getElementById('greeting-text')
     greet.textContent= `${greeting}`
   });
