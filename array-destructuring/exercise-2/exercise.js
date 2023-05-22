@@ -70,3 +70,14 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function belongToGryffindor(witch) {
+  witch.forEach((el) => {
+    let { firstName, lastName, house, pet, occupation } = el
+    if (house === 'Gryffindor') {
+      console.log(`${firstName} ${lastName}`)
+    }
+})
+  
+}
+belongToGryffindor(hogwarts)
