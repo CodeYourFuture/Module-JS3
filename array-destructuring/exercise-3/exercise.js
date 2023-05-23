@@ -6,3 +6,19 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+console.log(`QTY     ITEM                 TOTAL`);
+totals = 0;
+
+let result = order.forEach(el => {
+  let QTY = 0;
+  let item = null;
+  let total = 0;
+ console.table(
+   `${(QTY = el.quantity)}    ${(item = el.itemName)}                ${(total= el.unitPrice * el.quantity)}`
+ );
+ const totalOrder = el.quantity * el.unitPrice
+ totals += totalOrder
+})
+
+console.log(`\nTotal = ${totals}`);
