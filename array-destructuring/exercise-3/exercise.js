@@ -7,18 +7,19 @@ let order = [
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
 
-console.log(`QTY     ITEM                 TOTAL`);
-totals = 0;
+let totals = 0;
+let tableHeader = ["QTY", "ITEM", "TOTAL"];
 
-let result = order.forEach(el => {
-  let QTY = 0;
-  let item = null;
-  let total = 0;
- console.table(
-   `${(QTY = el.quantity)}    ${(item = el.itemName)}                ${(total= el.unitPrice * el.quantity)}`
- );
- const totalOrder = el.quantity * el.unitPrice
- totals += totalOrder
-})
+let result = order.map(({quantity: QTY, itemName: ITEM, unitPrice: TOTAL}) => ({
+  QTY,
+  ITEM, 
+  TOTAL, 
+  })
+);
 
+for(let {QTY, ITEM, TOTAL} of result){
+  let totalOrder = QTY * TOTAL;
+  totals += totalOrder
+}
+console.table(result, tableHeader);
 console.log(`\nTotal = ${totals}`);
