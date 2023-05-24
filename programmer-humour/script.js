@@ -10,4 +10,4 @@ async function getLatestComic() {
   }
 }
 
-getLatestComic();
+window.onload = getLatestComic;
