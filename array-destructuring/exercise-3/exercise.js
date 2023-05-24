@@ -6,3 +6,19 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function receipt(obj) {
+  let total = 0;
+  console.log("QTY\tITEM".padEnd(25, " "), "TOTAL");
+  order.forEach(({ itemName, quantity, unitPrice }) => {
+    console.table(
+      `${quantity}\t${itemName.padEnd(22, " ")}${(unitPrice * quantity).toFixed(
+        2
+      )}`
+    );
+    total += quantity * unitPrice;
+  });
+  console.log(`Total:${total}`);
+}
+
+receipt(order);
