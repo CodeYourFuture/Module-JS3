@@ -1,0 +1,12 @@
+body {
+  background-color: #001d3d;
+}
+
+.container {
+  margin: 50px 500px;
+}
+
+.photo {
+  border-radius: 15px;
+  box-shadow: black 5px 10px 30px 5px;
+}
