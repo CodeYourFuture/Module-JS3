@@ -14,5 +14,9 @@ async function fetchComic() {
     }
   }
   
-  window.addEventListener('load', fetchComic);
+  window.addEventListener('load', () => {
+    fetchComic().catch(error => {
+      console.error(error);
+    });
+  });
   
