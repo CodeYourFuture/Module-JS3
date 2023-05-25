@@ -21,7 +21,7 @@ h1 { text-align: center;
    justify-content: center;
 }
 
-#button {
+#button, #clear{
     padding: 10px;
     background-color: brown;
     font-size: 20px;

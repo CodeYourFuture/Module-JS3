@@ -28,3 +28,9 @@ function getDogImg(){
     });
 
 }
+
+const deleteButton = document.getElementById("clear");
+ deleteButton.addEventListener("click",function(){
+  const images = document.getElementById("dogpic");
+  images.innerHTML = "";
+ });
