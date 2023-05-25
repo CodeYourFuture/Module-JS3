@@ -94,7 +94,7 @@ function render() {
     cell5.appendChild(delBtn);
     delBtn.className = "btn btn-warning";
     delBtn.innerHTML = "Delete";
-    delBtn.addEventListener("clicks", function () {
+    delBtn.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
