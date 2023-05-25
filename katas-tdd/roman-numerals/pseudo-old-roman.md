@@ -39,18 +39,30 @@ We then iterate over the Roman numerals in the romanNumerals object using a for.
 Finally, we return the result string containing the old Roman numeral representation of the original number.
 
 
-describe('Old Roman Numerals Conversion', () => {
-  // Test cases here...
-});
+function testConvertToOldRoman() {
+    // Test case 1: Convert 4 to "IIII"
+    let result = convertToOldRoman(4);
+    assert.strictEqual(result, 'IIII');
 
+    // Test case 2: Convert 9 to "VIIII"
+    result = convertToOldRoman(9);
+    assert.strictEqual(result, 'VIIII');
 
-The it function is used to define an individual test case within the test suite. It takes a description of the test case as the first argument.
-Inside the test case, we call the convertToOldRoman function with the Arabic number 4 and store the result in the result variable.
-Then, we use the assert.strictEqual function to compare the result variable with the expected output 'IIII'. If the result matches the expected output, the test case passes. Otherwise, it fails and provides an error message.
-You'll notice another test case defined in a similar manner to cover converting the Arabic number 9 to the Roman numeral 'VIIII'.
-By running the test suite, you can validate whether the convertToOldRoman function behaves as expected and correctly converts Arabic numbers to old Roman numerals.
-Remember to install a testing framework like Mocha or Jest and run the test file using the appropriate command to execute the test cases and verify.
+    // Test case 3: Convert 10 to "X"
+    result = convertToOldRoman(10);
+    assert.strictEqual(result, 'X');
 
+    // Test case 4: Convert 40 to "XXXX"
+    result = convertToOldRoman(40);
+    assert.strictEqual(result, 'XXXX');
+
+    // Add more test cases as needed
+}
+
+// Call the test function
+testConvertToOldRoman();
+
+This pseudo code demonstrates a JavaScript function testConvertToOldRoman() that contains multiple test cases. Each test case calls the convertToOldRoman function with a specific input and uses assert.strictEqual() to compare the result with the expected output. Finally, the testConvertToOldRoman() function is invoked to run the tests.
 
 
 
