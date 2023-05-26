@@ -6,9 +6,14 @@ We can use destructuring to extract values from an object and assign them to var
 let person = {
   firstName: "Bruce",
   lastName: "Wayne",
+
 };
 
-let { firstName, lastName } = person;
+let { firstName, lastName, age } = personOne;
+
+function introduceYourself({firstName, lastName, age}) {
+  
+}
 
 console.log(`Batman is ${firstName}, ${lastName}`);
 ```
