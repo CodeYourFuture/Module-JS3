@@ -6,3 +6,20 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+let totals = 0;
+let tableHeader = ["QTY", "ITEM", "TOTAL"];
+
+let result = order.map(({quantity: QTY, itemName: ITEM, unitPrice: TOTAL}) => ({
+  QTY,
+  ITEM, 
+  TOTAL, 
+  })
+);
+
+for(let {QTY, ITEM, TOTAL} of result){
+  let totalOrder = QTY * TOTAL;
+  totals += totalOrder
+}
+console.table(result, tableHeader);
+console.log(`\nTotal = ${totals}`);
