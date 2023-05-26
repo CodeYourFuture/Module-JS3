@@ -30,9 +30,9 @@ fetch("https://official-joke-api.appspot.com/random_joke")
   .then(function (response) {
     console.log('first function in the promise chain');
     console.log(response);
-    // console.log(response.status);
-    // console.log(response.statusText);
-    // console.log(response.body);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.body);
 
     return response.json(); 
     // send the API response BODY parsed as JSON into a JS Object through to the NEXT function in the Promise Chain
@@ -46,8 +46,8 @@ fetch("https://official-joke-api.appspot.com/random_joke")
     const setupParagraph = document.getElementById("setup");
     const punchlineParagraph = document.getElementById("punchline");
 
-    setupParagraph.innerText = setup;
-    punchlineParagraph.innerText = punchline;
+    setupParagraph.textContent = setup;
+    punchlineParagraph.textContent = punchline;
   });
 
 
