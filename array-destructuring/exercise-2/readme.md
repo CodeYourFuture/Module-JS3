@@ -25,7 +25,7 @@ Hermione Granger
 Minerva McGonagall
 Albus Dumbledore
 ```
-
+ 
 ## Task 2
 
 - In `exercise.js` write a program that will take the `hogwarts` array as input and display the names of teachers who have pets.
