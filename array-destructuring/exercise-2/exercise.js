@@ -99,5 +99,3 @@ function havePets(){
 }
 
 havePets();
-
-// London_10_Saqib_Javed_array- destructure_exercise1_js3_module
