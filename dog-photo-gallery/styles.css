@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #007bff;
+  --font-size: 16px;
+  --spacing: 1rem;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing);
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  margin-bottom: var(--spacing);
+}
+
+#next,
+#showAll {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size);
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
