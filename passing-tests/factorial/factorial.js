@@ -11,7 +11,6 @@
 function factorial(int) {
   let result = 1;
   if (int < 0) {
-    // seeing to edge cases (-ve numbers and 0)
     return error;
   } else if (int === 0) {
     return 1;
