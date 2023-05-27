@@ -15,7 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+line 4 outputs 2 because it references the local variable x within the scope of the f1() function, while line 6 outputs 1 because it references the global variable x. 
 ## Question 2
 
 Take a look at the following code:
@@ -33,7 +33,7 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
-
+The first console.log() within the function f1() prints the value of x (x= 10). y is declared within the function's scope and cannot be accessed outside of it, resulting in a ReferenceError when trying to print y outside the function.
 ## Question 3
 
 Take a look at the following code:
@@ -61,3 +61,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The first console.log() prints 10 the value of x and does not consider the f1() function. The second console.log() prints { x: 10 } which is the modified object y where the x property is incremented by 1 within the f2() function.
