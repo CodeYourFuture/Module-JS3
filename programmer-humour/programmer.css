@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+#comic {
+  margin-top: 40px;
+}

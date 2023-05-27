@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+// x inside the function is local variable, x declared outside is a global variable
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +35,10 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+
+//The first console log outputs the value of x which is 10, then f1() returns undefined because it doesn't have a return statement, and the second console log throws a reference error because y is not defined outside of the function.
+
 
 ## Question 3
 
@@ -61,3 +67,10 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+9
+{
+  x: 10
+}
+
+The output in the console for this code will be 9 for the first console.log() statement and { x: 10 } for the second. This is because in the first function, the value of x is passed by value and remains unchanged, while in the second function, the object is passed by reference and the property value is modified.
