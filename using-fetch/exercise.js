@@ -17,9 +17,9 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch("https://www.greetingsapi.com/random")
+fetch("https://codeyourfuture.herokuapp.com/api/greetings")
   .then( (response) => {
-    return response.json();
+   return(response.json());
   })
   .then(function (result) {
     let greetingText = document.getElementById("greeting-text");
