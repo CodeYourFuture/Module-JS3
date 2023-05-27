@@ -70,3 +70,18 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+// let { firstName, lastName, house, pet, occupation } = hogwarts;
+
+// for (const { firstName, lastName, house } of hogwarts) {
+//   if (house === "Gryffindor") {
+//     console.log(firstName, lastName);
+//   }
+// }
+// hogwarts.filter(({ firstName, lastName, house } = hogwarts)=>house === "Gryffindor" ? console.log(firstName,lastName):"")
+
+let num = [1,2,3,4,5]
+for (const a of num) {
+  c=a+a
+  
+}
+console.log(c);
