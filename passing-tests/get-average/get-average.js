@@ -1,7 +1,6 @@
 // the input is an array of numbers and strings
 // return the average of all the numbers
 // be sure to exclude the strings
-let numbers = [4, "-", 8, 11, "hello", "57", 0, 2];
 
 function checkIfNumber(element) {
   return typeof element === "number";
