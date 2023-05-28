@@ -19,11 +19,11 @@ a different greeting should be displayed in the box.
 
 fetch("https://www.greetingsapi.com/random")
   .then(function (response) {
-    return response.json();
+    return response.text();
   })
   .then(function (greeting) {
     // Write the code to display the greeting text here
-    let greetMessage = document.getElementById('greeting-text');
-   greetMessage.innerText = `Hello: ${greeting.greeting}`;
-   greetMessage.innerText += `\nLanguage: ${greeting.language}`;
- });
+    let greetMessage = document.getElementById("greeting-text");
+    greetMessage.innerText = `Hello: ${greeting.greeting}`;
+    greetMessage.innerText += `\nLanguage: ${greeting.language}`;
+  });
