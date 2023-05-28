@@ -1,3 +1,4 @@
+
 let hogwarts = [
   {
     firstName: "Harry",
@@ -70,3 +71,28 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//TASK #1 
+function filterByHouse (array){
+  const filtered = array.filter ((element)=> {
+  return element.house ==="Gryffindor";
+  });
+  for (const {firstName , lastName} of filtered ){
+    console.log(firstName + " " + lastName);
+  } 
+}
+
+filterByHouse(hogwarsts);
+
+//TASK #2
+function filterByPetsOnly (array){
+  const filtered = array.filter ((element)=> {
+  return element.occupation === "Teacher" && element.pet !== null
+  });
+
+  for (const {firstName , lastName} of filtered ){
+    console.log(firstName + " " + lastName);
+  } 
+}
+
+filterByPetsOnly(hogwarts);
