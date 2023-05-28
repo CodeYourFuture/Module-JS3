@@ -18,8 +18,6 @@ async function fetchingData(){
     if (response && response.ok) {
         let data =  response.json()
         return  data
-    }else {
-    throw new Error(response.statusText);
     }
 })
 .then((data) => {
