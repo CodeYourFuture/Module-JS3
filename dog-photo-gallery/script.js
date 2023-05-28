@@ -22,6 +22,7 @@ if (data.status === 'success') {
 console.error('Error fetching dog image:', error);
     }
 }
-
 const fetchButton = document.getElementById('fetchButton');
-fetchButton.addEventListener('click', fetchRandomDogImage);
+fetchButton.addEventListener('click', () => {
+  fetchRandomDogImage();
+});
