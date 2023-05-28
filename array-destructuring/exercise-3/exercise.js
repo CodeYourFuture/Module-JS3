@@ -7,10 +7,16 @@ let order = [
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
 
+function receipt (order){
+let totalOfOneRow = 0;
+let total = 0;
 console.log("QTY   ITEM               TOTAL");
-
 for (const {itemName, quantity, unitPrice} of order){
-  console.log(`${quantity}     ${itemName.padEnd(16)}   ${unitPrice*quantity}`);
+  totalOfOneRow = (unitPrice*quantity); 
+  console.log(`${quantity}     ${itemName.padEnd(16)}   ${totalOfOneRow.toFixed(2)}`);
+  total = total + totalOfOneRow;
+}
+console.log(`Total: ${total}`);
 }
 
-
+receipt(order);
