@@ -1,3 +1,4 @@
+
 // <!DOCTYPE html>: This is the doctype declaration, which specifies that the document is an HTML5 document.
 // <html>, <head>, <title>, <body>: These are HTML tags that define the structure and content of the webpage. The <head> tag contains metadata about the document, and the <title> tag sets the title of the webpage that appears in the browser's title bar. The <body> tag contains the visible content of the webpage.
 // <h1>: This is a heading tag that displays the text "Random Dog Photo Gallery" as the main heading on the webpage.
@@ -21,4 +22,4 @@
 // console.error('Failed to fetch dog image:', data.message);: If the API response has a status other than 'success', this line logs an error message to the console, indicating that the dog image could not be fetched.
 // console.error('Error fetching dog image:', error);: This line logs an error message to the console if any error occurs during the API call or parsing of the response.
 // const fetchButton = document.getElementById('fetchButton');: This retrieves the fetch button element from the DOM using its id attribute.
-// fetchButton.addEventListener('click', fetchRandomDogImage);: This adds an event listener to the fetch button. When the button is clicked, it triggers the fetchRandomDogImage function, which fetches a random dog image and displays it in the gallery.
+// fetchButton.addEventListener('click', () => { ... });: This adds an event listener to the fetchButton element. It listens for the 'click' event, which occurs when the button is clicked by the user. The second argument is an anonymous arrow function that acts as the event handler for the click event.
