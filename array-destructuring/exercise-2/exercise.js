@@ -70,3 +70,31 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// Task-1
+
+let GryffindorMembers = [];
+
+for (let i = 0; i < hogwarts.length; i++) {
+  let{ firstName, lastName, house} = hogwarts[i];
+  if (house === "Gryffindor"){
+    GryffindorMembers.push (`${firstName} ${lastName}`);
+  }
+}
+
+console.log(gryffindorMembers.join("\n"));
+
+// Task-2
+
+let teacherWithPets = [];
+
+for (let i = 0; i < hogwarts.length; i++) {
+  let{firstName, lastName, occupation, pet} = hogwarts[i];
+  if (occupation === "Teacher" && pet !== null){
+    teacherWithPets.push(`${firstName} ${lastName}`);
+  }
+
+}
+
+console.log(teacherWithPets.join("\n"));
+
