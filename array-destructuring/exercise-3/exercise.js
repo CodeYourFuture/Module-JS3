@@ -6,3 +6,11 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+console.log("QTY   ITEM               TOTAL");
+
+for (const {itemName, quantity, unitPrice} of order){
+  console.log(`${quantity}     ${itemName.padEnd(16)}   ${unitPrice*quantity}`);
+}
+
+
