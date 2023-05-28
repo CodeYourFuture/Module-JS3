@@ -1,0 +1,11 @@
+The x variable inside the f1 function has a local scope and does not affect the value of the global x variable. The console.log statement inside f1 prints the value of the local x variable, which is 2. The console.log statement outside the f1 function prints the value of the global x variable, which is 1.
+The code will output:10,undefined,ReferenceError: y is not defined. The first console.log inside f1 will print the value of the global variable x, which is 10. The second console.log statement outputs undefined because the function f1 does not return a value. The final console.log throws a ReferenceError because the variable y is declared inside the f1 function and is not accessible outside its scope.
+9,{ x: 10 }In the first part, f1(x) passes the value of x to the f1 function, but the function only modifies the local variable val, not the original x variable. Thus, console.log(x) outputs 9. In the second part, f2(y) modifies the x property of the y object, so console.log(y) displays { x: 10 }.
+
+
+
+
+
+
+
+
