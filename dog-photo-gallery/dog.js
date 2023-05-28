@@ -10,10 +10,8 @@ let ulElement = document.getElementById('ul');
 
 // create EventListener to fetch and git data to display it 
 
-btn1.addEventListener('click', fetchingData)
-
-async function fetchingData(){
-    const response = await fetch("https://dog.ceo/api/breeds/image/random")
+btn1.addEventListener('click', function fetchingData(){
+    const response =  fetch("https://dog.ceo/api/breeds/image/random")
 .then((response) => {
     if (response && response.ok) {
         let data =  response.json()
@@ -24,4 +22,4 @@ async function fetchingData(){
     return ulElement.innerHTML = `<img src="${data.message}" >`
 })
 
-}
+});
