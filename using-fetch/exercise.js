@@ -22,7 +22,7 @@ fetch("https://codeyourfuture.herokuapp.com/api/greetings")
   .then(function(response) {
     return response.text();
   })
-  .then(function (result) {
+  .then(function (greeting) {
     let greetingTextElement = document.getElementById("greeting-text");
 
     greetingTextElement.innerHTML=greeting;
