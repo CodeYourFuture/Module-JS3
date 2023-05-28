@@ -1,0 +1,46 @@
+:root { 
+    --white: #fff;
+    --black: #000000; 
+ --greenBlack: #133032;
+    --font: 'Roboto, sans-serif'
+  }
+  
+ 
+  body {
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    height: 100vh; 
+    color: var--white); 
+      background-color: var(--greenBlack);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      font-family: 'Roboto', sans-serif;
+  } 
+  
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  
+} 
+ 
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+}  
+  
+#comic-image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+  
+}
+
+ 
