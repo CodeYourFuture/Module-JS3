@@ -1,5 +1,5 @@
 /*
-Use fetch to load a greeting from the API and display it 
+Use fetch to load a greeting from the API and display it
 in the HTML element with the id "greeting-text".
 
 API: https://codeyourfuture.herokuapp.com/api/greetings
@@ -16,11 +16,14 @@ Expected result
 Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
+let greetingEl =document.querySelector('#greeting-text')
+fetch("https://www.greetingsapi.com/random")
+  .then(response=>response.json())
+  .then(data =>{console.log(data);
+    greetingEl.textContent = `${data.greeting} That's greeting in ${data.language}`})
 
-fetch("*** Write the API address here ***")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (greeting) {
-    // Write the code to display the greeting text here
-  });
+
+
+
+
+
