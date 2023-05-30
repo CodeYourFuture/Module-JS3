@@ -6,7 +6,7 @@ API: https://codeyourfuture.herokuapp.com/api/greetings
 Response: A greeting in a random language
 
 To learn more about fetch, refer to the doc:
-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch!
 
 
 ================
@@ -15,12 +15,22 @@ Expected result
 
 Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
-*/
 
-fetch("*** Write the API address here ***")
+// ID'si "myElement" olan bir HTML öğesini seçme
+const element = document.querySelector('#myElement');
+
+// Seçilen öğe üzerinde işlemler yapma
+element.style.color = 'red';
+element.textContent = 'Merhaba Dünya!';
+response --dataa --error
+*/
+const greetingParagraph = document.querySelector('#greeting-text');
+const api = 'https://codeyourfuture.herokuapp.com/api/greetings';
+
+fetch(api)
   .then(function (response) {
     return response.text();
   })
   .then(function (greeting) {
-    // Write the code to display the greeting text here
+    greetingParagraph.innerText = greeting;
   });
