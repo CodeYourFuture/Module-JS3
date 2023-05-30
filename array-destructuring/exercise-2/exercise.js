@@ -70,3 +70,28 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+ 
+
+const gryffindorMembers = hogwarts
+  .filter((person) => {
+    const { house } = person;
+    return house === "Gryffindor";
+  })
+  .map((person) => {
+    const { firstName, lastName } = person;
+    return `${firstName} ${lastName}`;
+  });
+
+console.log(gryffindorMembers.join("\n"));
+
+const teacherNamesWithPets = hogwarts
+  .filter((person) => {
+    const { occupation, pet } = person;
+    return occupation === "Teacher" && pet !== null;
+  })
+  .map((person) => {
+    const { firstName, lastName } = person;
+    return `${firstName} ${lastName}`;
+  });
+
+console.log(teacherNamesWithPets.join("\n"));
