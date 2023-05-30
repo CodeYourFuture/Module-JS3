@@ -6,3 +6,22 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printOrder(order) {
+  let total = 0;
+  const title = ["QTY", "ITEM", "TOTAL"];
+  console.log(`${title[0].padEnd(8)}${title[1].padEnd(20)}${title[2]}`);
+  order.map((orders) => {
+    const { quantity, itemName, unitPrice } = orders;
+    total += unitPrice * quantity;
+    console.log(
+      `${quantity.toString().padEnd(8)}${itemName.padEnd(
+        20
+      )}${unitPrice.toString()}`
+    );
+  });
+
+  console.log("Total :" + total);
+}
+
+printOrder(order);
