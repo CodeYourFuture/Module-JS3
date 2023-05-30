@@ -70,3 +70,10 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//let {firstName,lastName,house,pet,occupation} = hogwarts;
+hogwarts.filter(({firstName,lastName,house,pet,occupation }= hogwarts)=>{
+  house==="Gryffindor"?console.log(`${firstName} ${lastName}`):'';
+  occupation==="Teacher" && pet!== null?console.log(`--------------\n${firstName} ${lastName}`):'';
+  });
+
