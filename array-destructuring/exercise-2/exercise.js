@@ -10,7 +10,7 @@ let hogwarts = [
     firstName: "Ron",
     lastName: "Weasley",
     house: "Gryffindor",
-    pet: "Scabbers",
+    pet: "Scabbers", 
     occupation: "Student",
   },
   {
@@ -70,3 +70,21 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function displayGryffindorHouse(hogwarts){
+  for(const {firstName, lastName, house} of hogwarts){
+    if (house === "Gryffindor"){
+      console.log(`${firstName} ${lastName}`)
+    }
+  }
+}
+
+
+function teacherWithPets(hogwarts){
+  for (const {firstName, lastName, pet, occupation} of hogwarts){
+    if (occupation === "teacher"  && pet === !null) {
+      console.log(`${firstName} ${lastName}`)   
+     }
+  }
+}
