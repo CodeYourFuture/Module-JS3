@@ -70,3 +70,18 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+for (const {firstName, lastName, house} of hogwarts) {
+  if (house === "Gryffindor") {
+    console.log(`${firstName} ${lastName}`);
+  }
+
+}
+
+
+
+//filter metedunda ilk baktigimiz degerleri yazariz ardindan ardindan aradigimiz kriterleri gireriz varsa True doner.
+//ForEach metodu cikan her bir degere uygular.
+hogwarts
+  .filter(({occupation,pet})=> occupation==="Teacher" && pet)
+
+  .forEach(({firstName, lastName}) => console.log(`${firstName} ${lastName}`));
