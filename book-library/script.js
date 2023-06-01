@@ -48,7 +48,7 @@ function submit() {
       title: title.value,
       author: author.value,
       pages: pages.value,
-      read: check.checked
+      check: check.checked
     }
     myLibrary.push(book);
     render();
@@ -89,9 +89,9 @@ function render() {
     cell4.appendChild(changeBut);
     let readStatus = "";
     if (myLibrary[i].check == false) {
-      readStatus = "Yes";
-    } else {
       readStatus = "No";
+    } else {
+      readStatus = "Yes";
     }
     changeBut.innerHTML = readStatus;
 
@@ -106,7 +106,7 @@ function render() {
     cell5.appendChild(delButton);
     delButton.className = "btn btn-warning";
     delButton.innerHTML = "Delete";
-    delButton.addEventListener("click", function () {
+    delButton.addEventListener("clicks", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
