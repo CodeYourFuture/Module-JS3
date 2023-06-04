@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+console.log outside of the function can't see the local variable, so when we will call the function, it will be another consol with the number 2
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +35,9 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+ CONSOLE.log(2) will show 10
+ console.log(3) will show underfined as can not see locsl variable
+
 
 ## Question 3
 
@@ -61,3 +66,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+ first console.log will show 10
+ the second console.log will show an object{ x: 9 }

@@ -1,0 +1,9 @@
+#photo-gallery{
+    display: flex;
+    text-decoration: none;
+}
+
+.image{
+    width: 10rem;
+}
+
