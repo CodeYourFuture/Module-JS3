@@ -1,0 +1,14 @@
+body{
+margin: 0;
+background-color: azure;
+}
+#root{
+text-align: center;
+}
+h1{
+font-size: 4rem
+}
+p{
+font-size: 2rem;
+
+}
