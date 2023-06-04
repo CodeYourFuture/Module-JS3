@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programmer Humour</title>
+    <style>
+        img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+
+        }
+    </style>
+</head>
+<body>
+<h1 id="title"></h1>
+<p id="date"></p>
+<p id="descr"></p>
+<img id="img" src="" alt="image">
+<script>
+    fetch('https://xkcd.now.sh/?comic=latest')
+        .then(response => response.json())
+        .then(data => {
+            console.log({data});
+            const {img, alt, title, day, month, year, num} = data;
+            const titleElem = document.querySelector('#title');
+            titleElem.innerText = title;
+            const dateElem = document.querySelector('#date');
+            dateElem.innerText = `${String(day).padStart(2, '0')}.${String(month).padStart(2, '0')}.${year}, #${num}`;
+            const descrElem = document.querySelector('#descr');
+            descrElem.innerText = alt;
+            const imgElem = document.querySelector('#img');
+            imgElem.src = img;
+            imgElem.alt = alt;
+        })
+        .catch(error => console.log({error}))
+</script>
+</body>
+</html>
