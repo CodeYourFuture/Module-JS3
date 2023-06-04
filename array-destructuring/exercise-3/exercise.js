@@ -8,3 +8,14 @@ let order = [
 ];
 
 
+console.log("QTY      ITEM                 TOTAL");
+let totalPrice = 0;
+order.forEach(({quantity, itemName, unitPrice}) => {
+  const itemPrice = `${unitPrice * quantity}`;
+  console.log(`${quantity}\t${itemName}\t\t\t\t${itemPrice}`);
+  totalPrice = totalPrice + unitPrice * quantity;
+})
+console.log(`Total: ${totalPrice}`);
+
+
+// Question: Why doesn't it work when I  do totalPrice = totalPrice + itemPrice in line 16
