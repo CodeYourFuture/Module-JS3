@@ -6,3 +6,13 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+const printOutOrderReceipt = () => {
+  console.log('QTY', 'ITEM', 'TOTAL');
+  order.forEach(({itemName, quantity, unitPrice}) => console.log(quantity, itemName, unitPrice*quantity));
+  const total = order.reduce((acc, {quantity, unitPrice}) => acc + quantity * unitPrice, 0)
+  console.log(`Total: ${total}`)
+}
+
+printOutOrderReceipt();
+

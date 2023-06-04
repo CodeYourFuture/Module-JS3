@@ -70,3 +70,9 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const peopleBelongingToGryffindorHouse = () => {
+  hogwarts.forEach(({firstName, lastName, house}) => {if(house === 'Gryffindor') {console.log(`${firstName} ${lastName}`)}});
+}
+
+peopleBelongingToGryffindorHouse();
