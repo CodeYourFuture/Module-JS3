@@ -6,3 +6,14 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+let grandTotal = 0;
+
+console.log("QTY\tITEM\t\t\t\tTOTAL");
+
+order.forEach(({ quantity, itemName, unitPrice }) => {
+  const total = unitPrice * quantity;
+  grandTotal += total;
+  console.log(`${quantity}\t${itemName}\t\t${total.toFixed(2)}`);
+});
+
+console.log("\nTotal: ", grandTotal.toFixed(2));
