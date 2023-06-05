@@ -29,9 +29,11 @@ const check = document.getElementById("check");
 // via Book function and start render function
 function submit() {
   if (
+    title.value == null ||
     title.value == "" ||
-    title.value == "" ||
-    pages.value == "" ||
+    author.value == null ||
+    author.value == "" ||
+    pages.value == null ||
     pages.value == ""
   ) {
     alert("Please fill all fields!");
@@ -58,7 +60,6 @@ function render() {
     table.deleteRow(n);
   }
   //insert updated row and cells
-  let length = myLibrary.length;
   for (let i = 0; i < myLibrary.length; i++) {
     let row = table.insertRow(1);
     let cell1 = row.insertCell(0);
