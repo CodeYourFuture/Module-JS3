@@ -29,9 +29,9 @@ const check = document.getElementById("check");
 // via Book function and start render function
 function submit() {
   if (
-    title.value == null ||
     title.value == "" ||
-    pages.value == null ||
+    title.value == "" ||
+    pages.value == "" ||
     pages.value == ""
   ) {
     alert("Please fill all fields!");
@@ -59,7 +59,7 @@ function render() {
   }
   //insert updated row and cells
   let length = myLibrary.length;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < myLibrary.length; i++) {
     let row = table.insertRow(1);
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
@@ -76,7 +76,7 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == true) {
+    if (myLibrary[i].check === true) {
       readStatus = "Yes";
     } else {
       readStatus = "No";
