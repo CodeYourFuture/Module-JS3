@@ -72,27 +72,27 @@ let hogwarts = [
 ];
 
 function studentsOfGryffindor (hogwarts) {
-  let studentsOfGryffindor = [];
+  let arrOfStudents = [];
   for ( let student of hogwarts) {
     if (student.house === "Gryffindor") {
-      studentsOfGryffindor.push(`${student.firstName} ${student.lastName}`);
+      arrOfStudents.push(`${student.firstName} ${student.lastName}`);
     }
   }
-  return studentsOfGryffindor
+  return arrOfStudents
   // return hogwarts.map(person => person.filter(person => person.house === "Gryffindor"))
 }
 console.log(studentsOfGryffindor(hogwarts))
 
-function teachersWhoHavePets (hogwarts) {
-  let teachersWhoHavePets = [];
+function arrOfTeachersWhoHavePets (hogwarts) {
+  let arrOfTeachersWhoHavePets = [];
   for (let teacher of hogwarts) {
     if (teacher.occupation === "Teacher" && teacher.pet !== null) {
-      teachersWhoHavePets.push(`${teacher.firstName} ${teacher.lastName}`);
+      arrOfTeachersWhoHavePets.push(`${teacher.firstName} ${teacher.lastName}`);
     }
   }
-  return teachersWhoHavePets
+  return arrOfTeachersWhoHavePets
 }
-console.log(teachersWhoHavePets(hogwarts))
+console.log(arrOfTeachersWhoHavePets(hogwarts))
 
 //ex 1
 // Harry Potter
