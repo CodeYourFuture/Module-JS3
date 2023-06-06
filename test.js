@@ -1,9 +1,10 @@
-const y = { x: 9 };
+function factorial(int) {
+  let result = 1;
 
-function f2(val) {
-  val.x = val.x + 1;
-  return val;
+  for (let i = int; i > 1; i--) {
+    result *= i;
+  }
+
+  return result;
 }
-console.log(y);
-f2(y);
-console.log(y);
+console.log(factorial(5));
