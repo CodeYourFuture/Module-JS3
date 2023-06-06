@@ -17,10 +17,10 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch("*** Write the API address here ***")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (greeting) {
-    // Write the code to display the greeting text here
-  });
+
+///////////// HELP!! Getting error saying: "CORS policy: No 'Access-Control-Allow-Origin'" ////////////
+
+
+fetch("https://www.greetingsapi.com/random")
+  .then(response => response.text())
+  .then(greeting => document.getElementById("greeting-text").innerHTML = greeting)
