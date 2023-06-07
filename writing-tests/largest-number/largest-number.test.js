@@ -1,13 +1,22 @@
 let getLargestNumber = require("./largest-number");
 
-test("returns largest number in array", function () {
-  // Arrange
-  // Act
-  // Assert
+describe("getLargestNumber", () => {
+  it("should return the largest number from the array", () => {
+    expect(getLargestNumber([5, 10, 3, 8, 2])).toBe(10);
+    expect(getLargestNumber([-5, -10, -3, -8, -2])).toBe(-2);
+    expect(getLargestNumber([-5, 10, -3, 8, -2])).toBe(10);
+    expect(getLargestNumber([5, 10, 3, 8, 10])).toBe(10);
+  });
+
+  it("should return the largest number when the array has a single element", () => {
+    expect(getLargestNumber([5])).toBe(5);
+  });
+
+  it("should return undefined when the array is empty", () => {
+    expect(getLargestNumber([])).toBeUndefined();
+  });
+
+  it("should return the largest negative number when the array has all negative numbers", () => {
+    expect(getLargestNumber([-5, -10, -3, -8, -2])).toBe(-2);
+  });
 });
-
-// example
-// input: [3, 21, 88, 4, 36];
-// expected: 88;
-
-// also test that the original array hasn't changed
