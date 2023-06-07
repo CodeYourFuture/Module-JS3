@@ -1,6 +1,6 @@
-let removeVowels = require("./remove-vowels");
+import { removeVowels } from "./remove-vowels.js";
 
-function removeVowelsFromWords(words) {
+export function removeVowelsFromWords(words) {
   let result = words.map(function (word) {
     return removeVowels(word);
   });
@@ -8,7 +8,7 @@ function removeVowelsFromWords(words) {
   return result;
 }
 
-module.exports = removeVowelsFromWords;
+// module.exports = removeVowelsFromWords;
 
 /*
     input: ["Irina", "Etza", "Daniel"]

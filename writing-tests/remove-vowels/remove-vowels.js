@@ -1,4 +1,4 @@
-function removeVowels(word) {
+export function removeVowels(word) {
   let characters = word.split("");
 
   let result = [];
@@ -17,9 +17,6 @@ function removeVowels(word) {
 
   return result.join("");
 }
-
-module.exports = removeVowels;
-
 /*
   Let's trace this piece of code - what is the value of result with this input
 

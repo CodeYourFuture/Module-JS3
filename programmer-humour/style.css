@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.image-element {
+}
