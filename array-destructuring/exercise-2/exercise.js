@@ -70,3 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+hogwarts.forEach(({ firstName, lastName, house }) => {
+  if (house === "Gryffindor") {
+    console.log(`${firstName} ${lastName}`);
+  }
+});
+
+hogwarts.forEach(({ firstName, lastName, occupation, pet }) => {
+  if (occupation === "Teacher" && pet !== null) {
+    console.log(`${firstName} ${lastName}`);
+  }
+});

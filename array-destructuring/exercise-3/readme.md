@@ -19,3 +19,5 @@ QTY     ITEM                TOTAL
 
 Total: 14.47
 ```
+
+//use \t to make a tab and leave the spaces.
