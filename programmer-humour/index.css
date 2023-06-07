@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.container{
+    margin: auto;
+    animation: comic 10s linear 1s infinite alternate;
+
+}
+img{
+    display: block;
+    position: relative;
+    animation: comic 10s linear 1s infinite alternate;
+}
+@keyframes comic {
+    0% { background-color: green; left:0; top: 0px;}
+    20%{background-color: red; left: 200px;top: 0px;}
+    40%{background-color: yellow; left: 400px; top: 0px;}
+    60%{background-color: blue; right: 600px; top: 0px;}
+    80%{background-color: powderblue; left: 800px; top: 0px;}
+    90%{background-color: orange; left: 1000px; top: 0px;}
+        100%{background-color: orange; left: 1400px; top: 0px;}
+
+}
+
