@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Ilovan</title>
+    <style>
+        #image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image API</h1>
+    <div class="container">
+        <img src="" id="image" alt="">
+    </div>
+
+    <script>
+        async function funnyImage(){
+            try {
+                const response = await fetch('https://xkcd.now.sh/?comic=latest');
+                const data = await response.json();
+                console.log(data);
+
+                if (response.ok) {
+                    const image = document.getElementById("image");
+                    image.src = data.img;
+                } else {
+                    console.log('Error', response.status);
+                }
+            }
+            catch (error) {
+                console.log('Error', error.message);
+            } 
+        }
+
+        funnyImage()
+    </script>
+</body>
+</html>
