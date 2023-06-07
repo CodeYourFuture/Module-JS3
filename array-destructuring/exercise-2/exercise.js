@@ -83,4 +83,11 @@ function getHogwarts() {
 
 getHogwarts();
 
-
+function teachersWithPets() {
+  hogwarts.forEach(teacher => {
+    let {firstName, lastName, pet} = teacher;
+    if (pet != null) {
+      console.log(`${firstName} ${lastName}`)
+    }
+  })
+}
