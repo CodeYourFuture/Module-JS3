@@ -16,6 +16,9 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+Answer: Because line 4 is a block scoop/ local variable, so javascript first looks for the current scoop variable not to the global variables.
+In line 6 executes the global variable which value is 1.
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +36,13 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+ Answer:
+ 1-  10 // line 30 executes the global variable.
+ 2-  function f1(){
+  console.log(x);
+  let y = 4;
+  }  // Line 34 executes function f1().
+  3-  20 // line 35 executes local variable .
 
 ## Question 3
 
@@ -61,3 +71,14 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+Answer:
+1-  Since x is a global variable, so x passed to f1() and remains unchanged.
+2- Inside f2(), val.x refers to the property x of the object passed as val, which is { x: 9 }. The line val.x = val.x + 1; increments the value of x by 1, resulting in { x: 10 }.
+
+After f2(y) is called, the value of y is printed using console.log(y), which outputs { x: 10 } since the object referenced by y has been modified within f2().
+
+
+
+
+ 

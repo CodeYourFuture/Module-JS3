@@ -1,0 +1,77 @@
+
+<!-- Who knew programmers could be funny?
+
+Write an function that makes an API call to `https://xkcd.now.sh/?comic=latest`
+
+1. Create a `HTML`, `CSS` and `JavaScript` file to write your code in
+
+- Inside the same file write a program that gets the `json` using Fetch.
+- A function should make an API call to the given endpoint: `https://xkcd.now.sh/?comic=latest`
+- Log the received data to the console
+- Render the `img` property into an `<img>` tag in the DOM
+- Incorporate error handling -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>funny?</title>
+  <style>
+    #comic-container {
+  text-align: center;
+}
+
+#comic-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+  </style>
+</head>
+<body>
+  <div id="comic-container">
+    <h1>Comic Pic</h1>
+    <div id="comic-image"></div>
+  </div>
+
+  <script>
+    
+  function fetchComicPic() {
+  fetch("https://xkcd.now.sh/?comic=latest")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch comic");
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      renderComicImage(data.img);
+    })
+    .catch(error => {
+      console.error(error);
+      displayErrorMessage("Failed to fetch comic");
+    });
+}
+
+function renderComicImage(imageUrl) {
+  const imageElement = document.createElement("img");
+  imageElement.src = imageUrl;
+
+  const ImageContainer = document.getElementById("comic-image");
+  ImageContainer.innerHTML = "";
+  ImageContainer.appendChild(imageElement);
+}
+
+function displayErrorMessage(message) {
+  const ImageContainer = document.getElementById("comic-image");
+  ImageContainer.innerHTML = `<p>${message}</p>`;
+}
+
+fetchComicPic();
+
+  </script>
+</body>
+</html>

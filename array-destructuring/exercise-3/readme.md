@@ -15,7 +15,7 @@ QTY     ITEM                TOTAL
 1       Egg McMuffin        2.80
 1       Sausage McMuffin    3.00
 2       Hot Coffee          2.00
-4       Hash Brown          1.60
+4       Hash Brown.         1.60
 
 Total: 14.47
 ```
