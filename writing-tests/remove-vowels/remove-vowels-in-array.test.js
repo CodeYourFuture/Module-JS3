@@ -3,7 +3,7 @@ let removeVowelsFromWords = require("./remove-vowels-in-array");
 
 test("remove vowels from all words in array", function () {
   const input = ["Irina", "Etza", "Daniel"];
-  result = removeVowelsFromWords(input);
+  const result = removeVowelsFromWords(input);
   expect(input).toEqual(["Irina", "Etza", "Daniel"]);
   expect(result).toStrictEqual(["rn", "tz", "Dnl"]);
   // Arrange
@@ -13,7 +13,7 @@ test("remove vowels from all words in array", function () {
 
 test("remove vowels from all words", function () {
   const input = "Daniel";
-  result = removeVowels(input);
+  const result = removeVowels(input);
   expect(input).toEqual("Daniel");
   expect(result).toBe("Dnl");
   // Arrange
