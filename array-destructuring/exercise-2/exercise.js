@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+// Task1
+
+// Solution:
+const gryffindorStudents = hogwarts.filter(({ house }) => house === "Gryffindor");
+gryffindorStudents.forEach(({ firstName, lastName }) => console.log(`${firstName} ${lastName}`));
+
+
+
+// Task2
+
+// Solution
+const teachersWithPets = [];
+
+for (const { firstName, lastName, occupation, pet } of hogwarts) {
+  if (occupation === "Teacher" && pet !== null) {
+    teachersWithPets.push(`${firstName} ${lastName}`);
+  }
+}
+
+console.log(teachersWithPets); 
