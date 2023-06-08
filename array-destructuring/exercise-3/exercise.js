@@ -9,13 +9,10 @@ let order = [
 
 
 console.log("QTY\tITEM\t\t\t\t\t\tTOTAL");
-let totalPrice = 0;
-order.forEach(({quantity, itemName, unitPrice}) => {
+const totalPrice = order.reduce((total, {quantity, itemName, unitPrice}) => {
   const itemPrice = unitPrice * quantity;
   console.log(`${quantity}\t${itemName}\t\t\t\t\t${itemPrice}`);
-  totalPrice = totalPrice + itemPrice;
-})
+  return total + itemPrice;
+}, 0);
 console.log(`\nTotal: ${totalPrice}`);
 
-
-// Question: Why doesn't it work when I  do totalPrice = totalPrice + itemPrice in line 16
