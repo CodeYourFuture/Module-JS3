@@ -6,3 +6,16 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printOrder(){
+
+  console.log('QTY\tITEM\t\t\tTOTAL');
+
+  for(const {itemName, quantity, unitPrice} of order){
+
+      console.log(`${quantity}\t${itemName}\t\t${unitPrice}`);
+
+
+  }
+}
+printOrder()

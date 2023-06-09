@@ -70,3 +70,17 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function destructure(hogwarts) {
+  hogwarts.forEach(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`)
+    }
+  });
+  hogwarts.forEach(({firstName, lastName, house, pet}) => {
+    if (pet && occupation === "Teacher") {
+      console.log( `${firstName} ${lastName}`)
+    }
+  }
+  )
+}
