@@ -4,7 +4,7 @@
   "description": "Like learning a musical instrument, programming requires daily practice.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testMatch='**/*.js'",
+    "test": "jest",
     "format": "prettier --write ."
   },
   "repository": {
@@ -23,3 +23,4 @@
     "prettier": "^2.8.7"
   }
 }
+
