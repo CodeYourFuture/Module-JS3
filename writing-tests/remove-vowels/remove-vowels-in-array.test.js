@@ -4,6 +4,9 @@ test("remove vowels from all words in array", function () {
   // Arrange
   // Act
   // Assert
+  let phrase = ["having", "lots", "of", "fun"];
+  let output = removeVowelsFromWords(phrase);
+  expect(output).toEqual(["hvng", "lts", "f", "fn"]);
 });
 
 // example
