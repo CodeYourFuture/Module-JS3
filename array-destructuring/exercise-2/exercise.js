@@ -10,6 +10,7 @@ let hogwarts = [
     firstName: "Ron",
     lastName: "Weasley",
     house: "Gryffindor",
+
     pet: "Scabbers",
     occupation: "Student",
   },
@@ -70,3 +71,19 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+console.log("Gryffindor Students:");
+for (const houseMembersNames of hogwarts) {
+  const { firstName, lastName, house } = houseMembersNames;
+  if (house === "Gryffindor") {
+    console.log(`${firstName} ${lastName}`);
+  }
+}
+
+console.log("Teachers with Pets:");
+for (const professionalsWithPets of hogwarts) {
+  const { firstName, lastName, occupation, pet } = professionalsWithPets;
+  if (occupation === "Teacher" && pet !== null) {
+    console.log(`${firstName} ${lastName}`);
+  }
+}
