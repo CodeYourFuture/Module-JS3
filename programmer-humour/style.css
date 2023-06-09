@@ -1,0 +1,10 @@
+.image-container{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+}
+
+.error-text{
+    color: red;
+    font-size: 2rem;
+}
