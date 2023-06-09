@@ -1,7 +1,13 @@
-let convertToNewRoman = require("./convert-to-new-roman");
+const convertToOldRoman = require("./convert-to-old-roman");
 
-test("returns I if passed 1 as an argument", function () {
+test("returns 'IIII' if it passed 4", function () {
   // Arrange
+  let number = 4;
+  let expected = "IIII";
+  
   // Act
+  let output = convertToOldRoman(number);
+  
   // Assert
+  expect(output).toEqual(expected);
 });
