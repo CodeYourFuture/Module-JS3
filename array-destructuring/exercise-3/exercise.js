@@ -6,3 +6,15 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+receipt = order.map(
+  ({itemName, quantity, unitPrice}) => {
+    return {
+      QTY: quantity,
+      ITEM: itemName,
+      TOTAL: quantity * unitPrice
+    };
+  }
+)
+console.table(receipt);
+receipt = [{QTY: 'QTY', ITEM: 'ITEM', TOTAL: 'TOTAL'}, ...receipt];

@@ -70,3 +70,12 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const students = hogwarts.filter(({house}) => house === "Gryffindor");
+students.forEach(({ firstName, lastName }) => {
+  console.log(`${firstName} ${lastName}`)
+});
+
+const teachers = hogwarts.filter(({ occupation, pet }) =>
+  occupation === "Teacher" && pet !== null);
+teachers.forEach(({ firstName, lastName }) => console.log(`${ firstName } ${ lastName }`));
