@@ -13,9 +13,9 @@ function average(numbers) {
     }
     if (count === 0) {
         return null;
-    }
+    } else {
     return total / count;
-}    
+}    }
 module.exports = average;
 
 
