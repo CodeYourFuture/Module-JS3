@@ -70,3 +70,11 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+let GryfArray = hogwarts.filter((student) => {
+  return (student.house === "Gryffindor")
+})
+for (const student of GryfArray) {
+  let {firstName, lastName} = student;
+  console.log(firstName, lastName);
+}
