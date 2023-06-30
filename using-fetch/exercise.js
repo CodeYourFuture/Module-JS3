@@ -17,10 +17,15 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch("*** Write the API address here ***")
+  fetch("https://holy-snow-6805.fly.dev/api/greetings")
   .then(function (response) {
     return response.text();
+    
   })
   .then(function (greeting) {
-    // Write the code to display the greeting text here
+    //Write the code to display the greeting text here
+    const greetings = JSON.parse(greeting);
+    const paraElement = document.getElementById('greeting-text');
+    paraElement.innerHTML = `${greetings.language} : ${greetings.hello}`
+    
   });
