@@ -17,10 +17,10 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch("*** Write the API address here ***")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (greeting) {
-    // Write the code to display the greeting text here
-  });
+
+fetch("https://random-word-api.herokuapp.com/word")
+.then(response => response.json())
+.then(data => {
+  console.log(data)
+  document.getElementById("greeting-text").innerText = data
+})

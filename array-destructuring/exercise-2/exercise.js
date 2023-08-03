@@ -72,6 +72,7 @@ let hogwarts = [
 ];
 
 function destructure(hogwarts) {
+
   hogwarts.forEach(({ firstName, lastName, house }) => {
     if (house === "Gryffindor") {
       console.log(`${firstName} ${lastName}`)
@@ -83,4 +84,4 @@ function destructure(hogwarts) {
     }
   }
   )
-}
+} 
