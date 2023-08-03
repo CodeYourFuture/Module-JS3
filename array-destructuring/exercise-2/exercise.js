@@ -70,3 +70,19 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+for (let i = 0; i < hogwarts.length; i++) {
+  const { firstName, lastName, house, pet, occupation } = hogwarts[i];
+  if(house === "Gryffindor" ){
+    console.log(firstName, lastName)
+  }
+}
+console.log("----step-2---")
+
+for (let i = 0; i < hogwarts.length; i++){
+  const { firstName, lastName, house, pet, occupation } = hogwarts[i];
+  if (pet==="Phoenix"){
+    console.log(firstName, lastName)
+  }
+}
