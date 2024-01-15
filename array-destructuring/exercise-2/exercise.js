@@ -70,3 +70,32 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function pupilsInGryffindor() {
+  const gryffindorPupils = [];
+
+  hogwarts.forEach((pupil) => {
+    const {firstName, lastName, house, pet, occupation} = pupil;
+    
+    if (house === "Gryffindor") {
+      gryffindorPupils.push(`${firstName} ${lastName}`);
+    }
+  })
+  return gryffindorPupils;
+}
+
+function teachersWithPets() {
+  const teachersWithPets = [];
+
+  hogwarts.forEach((teacher) => {
+    const {firstName, lastName, house, pet, occupation} = teacher;
+
+    if(pet !== null && occupation === "Teacher") {
+      teachersWithPets.push(`${firstName} ${lastName}`);
+    }
+  })
+      return teachersWithPets;
+}
+
+console.log(pupilsInGryffindor());
+console.log(teachersWithPets());
