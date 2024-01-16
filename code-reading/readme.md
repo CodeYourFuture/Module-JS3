@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+Because x can live inside of a function and have its values updated, but those changes wont reflect outside of the functions scope
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +35,7 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The first console log will work, because again, a variable outside of a function can be called inside of a function. Trying to use a variable from inside a function, outside the function wont work.
 
 ## Question 3
 
@@ -46,7 +49,7 @@ function f1(val) {
   return val;
 }
 
-f1(x);
+f1(x);  
 console.log(x);
 
 const y = { x: 9 };
@@ -61,3 +64,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The console logs will not change the value of x or y, because again they have there own value outside the scope of the function.
