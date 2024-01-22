@@ -70,3 +70,29 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function displayGryffindorNames(hogwartsArray) {
+  const peopleInGryffindor=[]
+  for (const { firstName, house,} of hogwartsArray) {
+    if (house === "Gryffindor") {
+      peopleInGryffindor.push(firstName)
+       
+    }
+  }
+  return peopleInGryffindor;
+}
+
+console.log(displayGryffindorNames(hogwarts))
+
+function displayPetOwner(hogwartsArray) {
+  const petOwnerName=[];
+  for (const { firstName, pet, occupation} of hogwartsArray) {
+    if (pet != null && occupation === "Teacher") {
+      petOwnerName.push(firstName)
+     
+    }
+  }
+  return teacherNames
+}
+//console.log(displayPetOwner(hogwarts))
