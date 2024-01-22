@@ -81,3 +81,11 @@ function gryffindorHouse({firstName,lastName,house}){
 for (const object of hogwarts) {
   gryffindorHouse(object);
 }
+
+console.log('-----------------------------------------------');
+for (const person of hogwarts) {
+  const {firstName,lastName,pet,occupation}=person;
+  if(pet!=null && occupation==='Teacher'){
+    console.log(firstName+' '+lastName);
+  }
+}
