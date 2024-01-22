@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: honeydew;
+        }
+        .template{
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 9rem 7rem 0rem 7rem;
+            border-radius: 5rem;            
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+function extractImagApi() {
+  return fetch(`https://xkcd.now.sh/?comic=latest`).then((res) => {
+    if (!res.ok) {
+      return "Error";
+    } else {
+      return res.json();
+    }
+  });
+}
+
+const template = document.createElement('div');
+template.classList.add("template");
+document.body.append(template);
+
+function displayImagToDom() {
+  extractImagApi().then((data) => {
+   
+    if (data === "Error") {
+      console.error("Error fetching XKCD API");
+      return;
+    }
+
+    const imageUrl = data.img;
+
+    const imageElement = document.createElement('img');
+    imageElement.src = imageUrl;
+    template.appendChild(imageElement);
+  });
+}
+
+displayImagToDom();
+
+
+window.onload = displayImagToDom;
+
+    </script>
+</body>
+</html>
