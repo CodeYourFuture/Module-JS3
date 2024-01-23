@@ -6,3 +6,15 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function getOrderArray(arr){
+  for (const { itemName, quantity, unitPrice } of arr) {
+    console.log(`Quantity: ${quantity} Item-Name: ${itemName}  Unit-Price: ${unitPrice}`)
+  } 
+    const sumOfUnitPrice = order.reduce((accumulator, { unitPrice }) => {
+    return accumulator + unitPrice;
+    }, 0);
+    console.log(`TOTAL:${sumOfUnitPrice}`)
+  }
+  
+  getOrderArray(order)
