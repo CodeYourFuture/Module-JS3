@@ -40,6 +40,10 @@ function submit() {
     return false;
   } else {
     let book = new Book(title.value, author.value, pages.value, check.checked);
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    check.checked = false;
     myLibrary.push(book);
     render();
   }
@@ -94,7 +98,7 @@ function render() {
 
     //add delete button to every row and render again
     let delButton = document.createElement("button");
-    delButton.id = i*100;
+    delButton.id = i * 100;
     cell5.appendChild(delButton);
     delButton.className = "btn btn-warning";
     delButton.innerHTML = "Delete";
