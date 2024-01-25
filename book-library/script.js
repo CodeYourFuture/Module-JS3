@@ -59,6 +59,7 @@ function render() {
   }
   //insert updated row and cells
   let length = myLibrary.length;
+  let tbody = table.getElementsByTagName('tbody')[0];
   for (let i = 0; i < length; i++) {
     let row = table.insertRow(1);
     let cell1 = row.insertCell(0);
