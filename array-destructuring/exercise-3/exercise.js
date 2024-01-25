@@ -6,3 +6,29 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+let total=0;
+
+function printReceipt(arr){
+
+  console.log("QTY   ITEM           TOTAL");
+  console.log('');
+
+  arr.forEach(element => {
+    let {itemName, quantity, unitPrice} = element;
+
+    let gap=20- itemName.length ;
+
+    console.log(quantity + '      ' + itemName + " ".repeat(gap) + unitPrice);
+    total += unitPrice;
+  });
+  console.log('');
+  console.log(`TOTAL: ${total}`);
+
+
+}
+
+
+printReceipt(order)
+
+
+
