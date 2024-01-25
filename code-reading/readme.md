@@ -16,6 +16,7 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+
 ## Question 2
 
 Take a look at the following code:
