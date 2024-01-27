@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(168, 254, 168);
+}
+.template{
+    background-color: rgb(241, 197, 197);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9rem 7rem 0rem 7rem;
+    border-radius: 2rem;            
+}
