@@ -58,7 +58,7 @@ function render() {
     cell2.innerHTML = myLibrary[i].author;
     cell3.innerHTML = myLibrary[i].pages;
 
-    // Add read/unread button
+    // Add read/unread button yes or no
     let changeBut = document.createElement("button");
     changeBut.id = i;
     changeBut.className = "btn btn-success";
