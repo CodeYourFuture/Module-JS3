@@ -75,12 +75,7 @@ function render() {
     changeBut.id = i;
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
-    let readStatus = "";
-    if (myLibrary[i].check == false) {
-      readStatus = "Yes";
-    } else {
-      readStatus = "No";
-    }
+    let readStatus = myLibrary[i].check ? "No" : "Yes";
     changeBut.innerHTML = readStatus;
 
     changeBut.addEventListener("click", function () {
@@ -94,7 +89,7 @@ function render() {
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
     delBut.innerHTML = "Delete";
-    delBut.addEventListener("clicks", function () {
+    delBut.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
