@@ -40,6 +40,7 @@ function submit() {
   ) {
     alert("Please fill all fields!");
   }
+  
   else {
     let book = new Book(titleValue, authorValue, pagesValue, checkValue);
       myLibrary.push(book);
