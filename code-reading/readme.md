@@ -16,6 +16,9 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+=====>>> Line 4 declares a new variable x within function f1, creating a new local scope for that variable. Therefore, when console.log(x) is called on line 5, it refers to the local variable x, which has the value 2. Meanwhile, console.log(x) on line 7 refers to the global variable x, which has the value 1.
+
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +36,8 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+=======>>>>>> The code will throw an error on the console.log(y) line. This is because the variable y is declared inside the f1 function using let, which limits it to the scope of the function. Therefore, it is not accessible outside the function, resulting in an undefined reference error.
 
 ## Question 3
 
@@ -61,3 +66,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+==== >> The first console.log(x) will print 9, as the variable x was not modified within the f1 function. The second console.log(y) will print {x: 10}, as the x property of object y was modified within the f2 function, increasing its value to 10.
