@@ -12,6 +12,3 @@ const orderfull = order.map(({ quantity, itemName, unitPrice }) => {
   ru.push(` ${quantity}  ${itemName}       ${unitPrice}`);
   tot += unitPrice;
 });
-
-console.log(ru);
-console.log(tot);
