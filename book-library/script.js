@@ -89,12 +89,12 @@ function render() {
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
-    delButton.id = i + 5;
-    cell5.appendChild(delButton);
-    delButton.className = "btn btn-warning";
-    delButton.innerHTML = "Delete";
-    delButton.addEventListener("click", function () {
+    const deleButton = document.createElement("button");
+    deleButton.id = i + 5;
+    cell5.appendChild(deleButton);
+    deleButton.className = "btn btn-warning";
+    deleButton.innerHTML = "Delete";
+    deleButton.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
