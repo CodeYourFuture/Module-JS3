@@ -77,3 +77,11 @@ const userObject = hogwarts.map(({ firstName, lastName, house }) => {
   }
 });
 console.log(newArr);
+
+let newTeac = [];
+const userPet = hogwarts.map(({ firstName, lastName, pet, occupation }) => {
+  if (occupation == "Teacher" && pet != null) {
+    newTeac.push(`${firstName} ${lastName}`);
+  }
+});
+console.log(newTeac);
