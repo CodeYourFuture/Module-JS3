@@ -70,18 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
-let newArr = [];
+
 const userObject = hogwarts.map(({ firstName, lastName, house }) => {
   if (house == "Gryffindor") {
-    newArr.push(`${firstName} ${lastName}`);
+    console.log(`${firstName} ${lastName}`);
   }
 });
-console.log(newArr);
 
-let newTeac = [];
 const userPet = hogwarts.map(({ firstName, lastName, pet, occupation }) => {
   if (occupation == "Teacher" && pet != null) {
-    newTeac.push(`${firstName} ${lastName}`);
+    console.log(`${firstName} ${lastName}`);
   }
 });
-console.log(newTeac);

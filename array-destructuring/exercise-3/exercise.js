@@ -6,9 +6,10 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
-let ru = [`QTY     ITEM     TOTAL`];
+console.log("QTY     ITEM     TOTAL");
 let tot = 0;
 const orderfull = order.map(({ quantity, itemName, unitPrice }) => {
-  ru.push(` ${quantity}  ${itemName}       ${unitPrice}`);
+  console.log(` ${quantity}  ${itemName}       ${unitPrice}`);
   tot += unitPrice;
 });
+console.log("\nTotal:", tot.toFixed(2));
