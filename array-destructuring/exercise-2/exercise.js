@@ -77,6 +77,7 @@ const userObject = hogwarts.map(({ firstName, lastName, house }) => {
   }
 });
 
+console.log("\nTask 2:");
 const userPet = hogwarts.map(({ firstName, lastName, pet, occupation }) => {
   if (occupation == "Teacher" && pet != null) {
     console.log(`${firstName} ${lastName}`);
