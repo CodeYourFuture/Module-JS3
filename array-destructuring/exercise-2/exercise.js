@@ -70,3 +70,10 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+let newArr = [];
+const userObject = hogwarts.map(({ firstName, lastName, house }) => {
+  if (house == "Gryffindor") {
+    newArr.push(`${firstName} ${lastName}`);
+  }
+});
+console.log(newArr);
