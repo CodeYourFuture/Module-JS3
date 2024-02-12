@@ -1,0 +1,20 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(73, 77, 75);
+}
+
+div{
+    width: fit-content;
+    padding: 5rem;
+    margin:  5rem auto;
+
+}
+
+img{
+    margin: 0;
+    padding: 0;
+}
