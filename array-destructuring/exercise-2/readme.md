@@ -4,7 +4,7 @@ _Need some help? Refresh your memory with [this article](https://www.freecodecam
 
 In `exercise.js`, you have an array that contains a list of people who are at Hogwarts School of Witchcraft and Wizardry.
 For each character you have the following information:
-
+D'You, 1 second a
 - First Name
 - Last Name
 - School House
