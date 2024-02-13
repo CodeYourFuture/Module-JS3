@@ -70,3 +70,16 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function displayGryffindorResident() {
+  const gryffindorOccupant=[]
+  for (const { firstName, lastName, house, pet, occupation} of hogwarts) {
+    if (house === "Gryffindor") {
+      gryffindorOccupant.push(`${firstName} ${lastName}`)
+
+    }
+  }
+  return gryffindorOccupant;
+}
+
+console.log(displayGryffindorResident());
