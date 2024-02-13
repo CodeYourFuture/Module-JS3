@@ -71,6 +71,8 @@ let hogwarts = [
   },
 ];
 
+//Task 1
+
 function findGryffindor(arr){
   arr.forEach(element => {
     let {firstName, lastName, house, pet, occupation} = element;
@@ -82,3 +84,17 @@ function findGryffindor(arr){
 }
 
 findGryffindor(hogwarts);
+
+// Task 2
+
+function findTeachersWithPets(arr){
+  arr.forEach(element => {
+    let {firstName, lastName, house, pet, occupation} = element;
+
+    if(occupation === "Teacher" && pet !== null){
+      console.log(firstName, lastName);
+    }
+  });
+}
+
+findTeachersWithPets(hogwarts)
