@@ -6,3 +6,17 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printOrder() {
+  const orderTable = "QTY\t    ITEM\t                TOTAL\n";
+  console.log(`${orderTable}`);
+  for (const {itemName, quantity, unitPrice} of order) {
+    const totalItemPrice = (quantity * unitPrice).toFixed(2);
+    console.log(`${quantity}       ${itemName.padEnd(20)}    ${totalItemPrice}`);
+  }  
+  const totalPrice = order.reduce((accumulator, {quantity, unitPrice}) =>{
+    return accumulator + quantity * unitPrice;
+  }, 0)
+  console.log(`\nTotal: ${totalPrice.toFixed(2)}`);
+}
+printOrder();
