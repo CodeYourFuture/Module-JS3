@@ -70,3 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function findGryffindor(arr){
+  arr.forEach(element => {
+    let {firstName, lastName, house, pet, occupation} = element;
+
+    if(house === "Gryffindor"){
+    console.log(firstName, lastName);
+  }
+  });
+}
+
+findGryffindor(hogwarts);
