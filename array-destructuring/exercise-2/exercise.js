@@ -73,7 +73,7 @@ let hogwarts = [
 
 function displayGryffindorResident() {
   const gryffindorOccupant=[]
-  for (const { firstName, lastName, house, pet, occupation} of hogwarts) {
+  for (const { firstName, lastName, house} of hogwarts) {
     if (house === "Gryffindor") {
       gryffindorOccupant.push(`${firstName} ${lastName}`)
 
@@ -86,7 +86,7 @@ console.log(displayGryffindorResident());
 
 function displayTeacherWithPets() {
   const teacherWithPets = [];
-  for (const {firstName, lastName, house, pet, occupation} of hogwarts) {
+  for (const {firstName, lastName, pet, occupation} of hogwarts) {
     if (occupation === "Teacher" && pet != null) {
       teacherWithPets.push(`${firstName} ${lastName}`);
     }
