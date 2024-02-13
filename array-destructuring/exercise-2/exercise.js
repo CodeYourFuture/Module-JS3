@@ -83,3 +83,14 @@ function displayGryffindorResident() {
 }
 
 console.log(displayGryffindorResident());
+
+function displayTeacherWithPets() {
+  const teacherWithPets = [];
+  for (const {firstName, lastName, house, pet, occupation} of hogwarts) {
+    if (occupation === "Teacher" && pet != null) {
+      teacherWithPets.push(`${firstName} ${lastName}`);
+    }
+  }
+  return teacherWithPets;
+}
+console.log(displayTeacherWithPets());
