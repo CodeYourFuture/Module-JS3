@@ -6,3 +6,26 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+let { quantity, itemName, unitPrice } = order;
+
+function itemList(item){
+  const subtitleItems = ["QTY", "ITEM", "TOTAL"];
+  item.forEach(order => {
+    const totalOrder = (order.quantity * order.unitPrice).toFixed(2);
+    subtitleItems.push(`${order.quantity}\t${order.itemName}\t${totalOrder}`);
+  });
+  
+  return subtitleItems.join('\n')
+  
+}
+console.log(itemList(order));
+
+
+function totalPrice(num) {
+  const total =  num.reduce((accumulator, currentValue) => accumulator + currentValue.unitPrice * currentValue.quantity, 0);
+  return `total: ${total}`
+
+}
+ console.log(totalPrice(order));
+
