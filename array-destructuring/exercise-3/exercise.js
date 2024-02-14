@@ -15,6 +15,7 @@ function itemList(item){
     const totalOrder = (order.quantity * order.unitPrice).toFixed(2);
     subtitleItems.push(`${order.quantity}\t${order.itemName}\t${totalOrder}`);
   });
+  
   return subtitleItems.join('\n')
 }
 console.log(itemList(order));
@@ -23,7 +24,7 @@ console.log(itemList(order));
 function totalPrice(num) {
   const total =  num.reduce((accumulator, currentValue) => accumulator + currentValue.unitPrice * currentValue.quantity, 0);
   return `total: ${total}`
-  
+
 }
  console.log(totalPrice(order));
 
