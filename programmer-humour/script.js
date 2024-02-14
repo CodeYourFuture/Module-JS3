@@ -1,6 +1,6 @@
 const imageComic = document.getElementById("imageComic");
 
-function fetching() {
+function fetchingImg() {
   return fetch("https://xkcd.now.sh/?comic=latest")
     .then((res) => {
       if (!res.ok) {
@@ -16,4 +16,4 @@ function fetching() {
       console.error("Error fetching comic:");
     });
 }
-fetching();
+fetchingImg();
