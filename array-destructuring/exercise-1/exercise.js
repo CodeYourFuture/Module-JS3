@@ -12,5 +12,3 @@ function introduceYourself({ name, age, favoriteFood }) {
   );
 }
 
-console.log(introduceYourself(personOne));
-
