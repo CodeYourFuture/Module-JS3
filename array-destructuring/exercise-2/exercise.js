@@ -71,15 +71,26 @@ let hogwarts = [
   },
 ];
 
-const userObject = hogwarts.map(({ firstName, lastName, house }) => {
-  if (house == "Gryffindor") {
-    console.log(`${firstName} ${lastName}`);
-  }
-});
+console.log("Task 1:");
+const userObject = hogwarts
+  .map(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor") {
+      return `${firstName} ${lastName}`;
+    }
+  })
+  .filter((name) => name !== undefined)
+  .join("\n");
+
+console.log(userObject);
 
 console.log("\nTask 2:");
-const userPet = hogwarts.map(({ firstName, lastName, pet, occupation }) => {
-  if (occupation == "Teacher" && pet != null) {
-    console.log(`${firstName} ${lastName}`);
-  }
-});
+const userPet = hogwarts
+  .map(({ firstName, lastName, pet, occupation }) => {
+    if (occupation === "Teacher" && pet !== null) {
+      return `${firstName} ${lastName}`;
+    }
+  })
+  .filter((name) => name !== undefined)
+  .join("\n");
+
+console.log(userPet);
