@@ -1,0 +1,23 @@
+Copy code body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#comic-container {
+  margin-top: 20px;
+}
+
+#imageComic {
+  max-width: 100%;
+}
