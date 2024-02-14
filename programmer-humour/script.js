@@ -26,7 +26,7 @@ function displayData(){
         imageDiv.appendChild(createImage);
     } )
 }
-console.log(displayData());
+displayData();
 
 window.onload = displayData;
 
