@@ -23,6 +23,7 @@ console.log(itemList(order));
 function totalPrice(num) {
   const total =  num.reduce((accumulator, currentValue) => accumulator + currentValue.unitPrice * currentValue.quantity, 0);
   return `total: ${total}`
+  
 }
  console.log(totalPrice(order));
 
