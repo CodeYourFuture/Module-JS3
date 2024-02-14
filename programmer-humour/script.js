@@ -14,6 +14,7 @@ let imageDiv = document.createElement('div');
 document.body.appendChild(imageDiv);
 
 function displayData(){
+    
     getImageFetch().then((data) => {
         if(!data){
             console.log("data can not found");
