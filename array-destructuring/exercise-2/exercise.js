@@ -70,3 +70,22 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function showPeopleBelongIn(array, houseName) {
+  const filteredArray = array.filter((person) => person.house === houseName);
+  filteredArray.forEach((person) => {
+    const {firstName, lastName} = person;
+    console.log(`${firstName} ${lastName}`);
+  })
+}
+
+function showTeachersWithPets(array) {
+  const filteredArray = array.filter((person) => person.pet !== null && person.occupation === "Teacher");
+  filteredArray.forEach((person) => {
+    const {firstName, lastName} = person
+    console.log(`\n${firstName} ${lastName}`);
+  })
+}
+
+showPeopleBelongIn(hogwarts, "Gryffindor");
+showTeachersWithPets(hogwarts);
