@@ -6,3 +6,29 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function makeReceipt(order) {
+  let total = 0;
+  let itemNameArray = []
+  let quantityArray = []
+  let itemPriceArray = []
+
+  order.map((item) => {
+    const { itemName, quantity, unitPrice } = item;
+    total += quantity * unitPrice;
+    quantityArray.push(quantity);
+    itemNameArray.push(itemName);
+    itemPriceArray.push(quantity * unitPrice);
+  })
+
+  console.log(`QTY     ITEM                TOTAL`);
+
+  itemNameArray.forEach((itemName, index) => {
+    const spaces = " ".repeat(20 - itemName.length);
+    console.log(`${quantityArray[index]}       ${itemName}${spaces}$${itemPriceArray[index].toFixed(2)}`);
+  })
+
+  console.log(`\nTotal: $${total.toFixed(2)}`);
+}
+
+makeReceipt(order);
