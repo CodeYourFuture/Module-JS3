@@ -29,3 +29,9 @@ function htmlGenerator(title, imageUrl, imageAlt) {
 
   return html
 }
+
+function showError(error) {
+  console.log(error);
+  const root = document.querySelector("#root")
+  root.innerHTML = `<h2>${error}</h2>`
+}
