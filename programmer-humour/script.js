@@ -18,7 +18,7 @@ function renderPage(data) {
   const root = document.querySelector("#root")
   const html = htmlGenerator(data.title, data.img, data.alt);
 
-  // root.innerHTML = html;
+  root.innerHTML = html;
 }
 
 function htmlGenerator(title, imageUrl, imageAlt) {
