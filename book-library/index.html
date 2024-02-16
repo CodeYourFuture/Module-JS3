@@ -31,7 +31,7 @@
       <div class="form-group">
         <label for="title">Title:</label>
         <input
-          type="title"
+          type="text"
           class="form-control"
           id="title"
           name="title"
@@ -39,7 +39,7 @@
         />
         <label for="author">Author: </label>
         <input
-          type="author"
+          type="text"
           class="form-control"
           id="author"
           name="author"
@@ -58,13 +58,14 @@
             type="checkbox"
             class="form-check-input"
             id="check"
-            value=""
+            value="read"
           />Read
         </label>
         <input
           type="submit"
           value="Submit"
           class="btn btn-primary"
+          id="submitBtn"
           onclick="submit();"
         />
       </div>

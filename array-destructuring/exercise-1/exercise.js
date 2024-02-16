@@ -4,9 +4,9 @@ const personOne = {
   favouriteFood: "Spinach",
 };
 
-function introduceYourself(___________________________) {
+function introduceYourself(person) {
   console.log(
-    `Hello, my name is ${name}. I am ${age} years old and my favourite food is ${favouriteFood}.`
+    `Hello, my name is ${person.name}. I am ${person.age} years old and my favourite food is ${person.favouriteFood}.`
   );
 }
 

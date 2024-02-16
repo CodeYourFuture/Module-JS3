@@ -70,3 +70,23 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function displayGryffindorNames(hogwarts) {
+  const gryffindorNames = hogwarts
+    .filter(({ house }) => house === "Gryffindor")
+    .map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+  
+  console.log(gryffindorNames.join('\n'));
+}
+
+displayGryffindorNames(hogwarts);
+
+function displayTeachersWithPets(hogwarts) {
+  const teacherNamesWithPets = hogwarts
+    .filter(({ occupation, pet }) => occupation === "Teacher" && pet)
+    .map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+  
+  console.log(teacherNamesWithPets.join('\n'));
+}
+
+displayTeachersWithPets(hogwarts);
