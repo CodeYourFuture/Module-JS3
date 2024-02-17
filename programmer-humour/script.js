@@ -1,12 +1,13 @@
-
+const comicImage = document.getElementById("comic-img");
 function fetchComic() {
-    return fetch("https://xkcd.now.sh/?comic=latest").then(function (data) {
-        console.log("getting the data back ...");
-        console.log(data, "data");
-        return data.json();
-    });
+    return fetch("https://xkcd.now.sh/?comic=latest")
+        .then((data) => data.json());
 }
 
-fetchComic().then(function (comic) {
+fetchComic().then((comic) => {
+    comicImage.src = comic.img
     console.log(comic);
 });
+
+
+
