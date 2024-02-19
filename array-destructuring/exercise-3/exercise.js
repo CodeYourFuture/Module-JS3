@@ -6,13 +6,3 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
-
-let sum = 0;
-
-order.forEach(({ itemName, quantity, unitPrice }) => {
-  let total = unitPrice * quantity;
-  console.log(`For ${quantity} ${itemName} the total price is ${total}`);
-  sum += total;
-});
-
-console.log(`Total: ${+sum}`);
