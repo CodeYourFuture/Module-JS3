@@ -1,5 +1,3 @@
-Did you know that destructuring can also be used on objects as well.
-
 We can use destructuring to extract values from an object and assign them to variables in one line.
 
 ```js
