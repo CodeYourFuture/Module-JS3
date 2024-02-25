@@ -1,3 +1,10 @@
+function isGryffindor(list) {
+  list.map(({ firstName, house }) => {
+    if (house === "Gryffindor") return [...list];
+  });
+}
+isGryffindor([...hogwarts]);
+
 let hogwarts = [
   {
     firstName: "Harry",
