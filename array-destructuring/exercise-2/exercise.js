@@ -1,9 +1,13 @@
 function isGryffindor(list) {
-  list.map(({ firstName, house }) => {
-    if (house === "Gryffindor") return [...list];
+  list.map(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor") console.log(firstName, lastName, house);
   });
 }
-isGryffindor([...hogwarts]);
+function havePet(list) {
+  list.map(({ firstName, lastName, pet, occupation }) => {
+    if (pet && occupation === "Teacher") console.log(firstName, lastName, pet);
+  });
+}
 
 let hogwarts = [
   {
@@ -77,3 +81,7 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//isGryffindor(hogwarts);
+
+havePet(hogwarts);
