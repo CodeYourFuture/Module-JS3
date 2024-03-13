@@ -9,11 +9,11 @@ let order = [
 
 function makeReceipt(order) {
   let total = 0;
-  let itemNameArray = []
-  let quantityArray = []
-  let itemPriceArray = []
+  const itemNameArray = []
+  const quantityArray = []
+  const itemPriceArray = []
 
-  order.map((item) => {
+  order.forEach((item) => {
     const { itemName, quantity, unitPrice } = item;
     total += quantity * unitPrice;
     quantityArray.push(quantity);
