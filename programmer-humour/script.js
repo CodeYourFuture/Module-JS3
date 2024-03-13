@@ -1,5 +1,4 @@
 const api = "https://xkcd.now.sh/?comic=latest"
-let lastComic
 
 document.addEventListener('DOMContentLoaded', function () {
   fetchComic(api);
@@ -8,9 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function fetchComic(api) {
   fetch(api)
     .then((response) => response.json())
-    .then((data) => lastComic = data)
-    .then(() => renderPage(lastComic))
-    .catch((error) => console.log(error));
+    .then((lastComic) => renderPage(lastComic))
+    .catch((error) => showError(error));
 }
 
 function renderPage(data) {
