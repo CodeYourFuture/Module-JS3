@@ -21,6 +21,14 @@ fetch(apiUrl)
         comicContainer.appendChild(img);
 
 
+        // hr line
+        const hr = document.createElement('hr');
+        comicContainer.appendChild(hr);
+
+        // a p for text
+        const moonArmorText = document.createElement('p');
+        moonArmorText.textContent = 'Moon Landing Mission Profiles';
+        comicContainer.appendChild(moonArmorText);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
