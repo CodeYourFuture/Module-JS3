@@ -46,7 +46,36 @@ fetch(apiUrl)
         hiddenP.id = 'moon'; // id for easy access
         comicContainer.appendChild(hiddenP);
 
+ // a div for buttons  especially for css
+ const buttonsDiv = document.createElement('div');
+ buttonsDiv.classList.add("btndiv") 
 
+ //Add 3 buttons
+ const archiveButton = document.createElement('button');
+ archiveButton.textContent = 'ARCHIVE';
+ archiveButton.onclick = function() {
+     window.location.href = 'https://m.xkcd.com/archive/';
+ };
+
+ const whatIfButton = document.createElement('button');
+ whatIfButton.textContent = 'WHAT IF??';
+ whatIfButton.onclick = function() {
+     window.location.href = 'https://what-if.xkcd.com/';
+ };
+
+ const aboutButton = document.createElement('button');
+ aboutButton.textContent = 'ABOUT';
+ aboutButton.onclick = function() {
+     window.location.href = 'https://xkcd.com/about/';
+ };
+
+ // Append buttons to the div
+ buttonsDiv.appendChild(archiveButton);
+ buttonsDiv.appendChild(whatIfButton);
+ buttonsDiv.appendChild(aboutButton);
+
+ // Append div to the comic container
+ comicContainer.appendChild(buttonsDiv);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
