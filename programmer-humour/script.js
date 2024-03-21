@@ -20,6 +20,33 @@ fetch(apiUrl)
         comicContainer.appendChild(p);
         comicContainer.appendChild(img);
 
+        // hr line
+        const hr = document.createElement('hr');
+        comicContainer.appendChild(hr);
+
+        // a p for text
+        const moonArmorText = document.createElement('p');
+        moonArmorText.textContent = 'Moon Landing Mission Profiles';
+        comicContainer.appendChild(moonArmorText);
+
+        // a superscript
+        const superscript = document.createElement('sup');
+        superscript.textContent = '(alt-text)';
+        superscript.style.cursor = 'pointer';
+        superscript.onclick = function() {
+            const p = document.getElementById('moon');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none'; 
+        };
+        moonArmorText.appendChild(superscript);
+
+        // hidden p
+        const hiddenP = document.createElement('p');
+        hiddenP.textContent = "If you pick a low enough orbit, it gives you a lot of freedom to use a lightweight launch vehicle such as a stepladder.";
+        hiddenP.style.display = 'none'; 
+        hiddenP.id = 'moon'; // id for easy access
+        comicContainer.appendChild(hiddenP);
+
+
     })
     .catch(error => {
         console.error('Error fetching data:', error);
