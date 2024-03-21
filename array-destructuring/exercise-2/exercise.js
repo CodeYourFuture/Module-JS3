@@ -70,3 +70,24 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+function belongToGryffindorHouse(hogwarts) {
+  for (let { firstName, lastName, house } of hogwarts) {
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  }
+}
+
+function teachersWhoHavePets(hogwarts) {
+  for (let { firstName, lastName, occupation, pet } of hogwarts) {
+    if (occupation === "Teacher" && pet !== null) {
+      console.log(`${firstName} ${lastName}`);
+    }
+  }
+}
+
+console.log("Gryffindor House Members:");
+belongToGryffindorHouse(hogwarts);
+
+console.log("\nTeachers who have pets:");
+teachersWhoHavePets(hogwarts);
