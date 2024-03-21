@@ -76,6 +76,19 @@ fetch(apiUrl)
 
  // Append div to the comic container
  comicContainer.appendChild(buttonsDiv);
+// ADD FOOTER
+const footer = document.createElement('footer');
+const link = document.createElement('a');
+link.textContent = 'Visit xkcd and have fun';
+link.href = 'https://m.xkcd.com/';
+link.target = '_blank'; //new tab goes to original website
+
+// Append link to the footer
+footer.appendChild(link);
+
+// Append footer to the comic container
+comicContainer.appendChild(footer);
+
     })
     .catch(error => {
         console.error('Error fetching data:', error);
