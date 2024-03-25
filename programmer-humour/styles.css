@@ -10,16 +10,29 @@ body {
 }
 
 h1 {
-    color: #c24242;
+    color: aliceblue;
+    padding: 1px;
+    max-width: 100%;
+    padding: 10px;
+    background-color: #c24242;
 
 }
 
 img {
     max-width: 100%;
     height: auto;
-    margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #c24242;
     padding: 2rem;
+
+}
+
+footer {
+    color: aliceblue;
+    padding: 1px;
+    max-width: 100%;
+    border: solid 2px #c24242;
+    margin-top: 10px;
+    background-color: #c24242;
 
 }

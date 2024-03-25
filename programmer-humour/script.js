@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+  fetchComic();
+});
+
 function fetchComic() {
   fetch("https://xkcd.now.sh/?comic=latest")
     .then((response) => response.json())
@@ -12,7 +16,3 @@ function fetchComic() {
     })
     .catch((error) => console.error("Error fetching comic:", error));
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  fetchComic();
-});
