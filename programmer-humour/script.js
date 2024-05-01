@@ -13,4 +13,14 @@ async function fetchComic(){
         console.error('Error fetching comic:', error);
     }
     }
-}
+
+    //function to render the comic image into the Dom
+    function renderComic(imgUrl) {
+        const comicContainer = document.getElementById('comicContainer');
+        const imgElement = document.createElement('img');
+    imgElement.src = imgUrl;
+    imgElement.alt = 'xkcd Comic';
+    imgElement.id = 'comic';
+    comicContainer.appendChild(imgElement);
+    }
+    window.onload = fetchComic;
