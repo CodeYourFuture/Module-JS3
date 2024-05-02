@@ -37,6 +37,9 @@ What will be the output of this code. Explain your answer in 50 words or less.
 # The code output: 
 10 
 undefined
+# Explain for my answer : 
+console.log(x) inside f1() prints the value of the outer variable x, which is 10. y is defined locally within f1(), so it's not accessible outside the function, resulting in undefined.
+
 
 ## Question 3
 
@@ -63,5 +66,14 @@ function f2(val) {
 f2(y);
 console.log(y);
 ```
+
+# answer Q3 
+# THE OUTPUT 
+9
+{ x: 10 }
+
+# MY EXPLAIN 
+In the first case, x is a primitive (number), so passing it to f1() doesn't change its value. In the second case, y is an object, and since objects are passed by reference, modifying val.x inside f2() affects the original object y.
+
 
 What will be the output of this code. Explain your answer in 50 words or less.
