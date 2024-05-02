@@ -15,7 +15,8 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+## My answer: 
+Line 4 creates a new local variable x inside the function f1, which shadows the outer variable x. So, when console.log(x) executes on line 5, it refers to the local x with a value of 2. Line 7 refers to the outer variable x, which retains its original value of 1.
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +34,9 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+# The code output: 
+10 
+undefined
 
 ## Question 3
 
