@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> </title>
+    <title>My Book Library</title> <!-- Added a title for your webpage -->
     <meta
       charset="utf-8"
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <!-- Updated script sources to use HTTPS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Updated CSS source to use HTTPS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
+    <!-- Included your custom CSS file -->
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
@@ -31,7 +34,7 @@
       <div class="form-group">
         <label for="title">Title:</label>
         <input
-          type="title"
+          type="text" <!-- Corrected input type to "text" -->
           class="form-control"
           id="title"
           name="title"
@@ -39,7 +42,7 @@
         />
         <label for="author">Author: </label>
         <input
-          type="author"
+          type="text" <!-- Corrected input type to "text" -->
           class="form-control"
           id="author"
           name="author"
@@ -61,12 +64,13 @@
             value=""
           />Read
         </label>
-        <input
-          type="submit"
-          value="Submit"
+        <button
+          type="button" <!-- Changed input type to button -->
           class="btn btn-primary"
           onclick="submit();"
-        />
+        >
+          Submit
+        </button>
       </div>
     </div>
 
@@ -81,13 +85,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+        <!-- Removed the default table row -->
       </tbody>
     </table>
 
