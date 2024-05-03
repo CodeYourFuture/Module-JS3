@@ -75,12 +75,7 @@ function render() {
     changeBut.id = i;
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
-    let readStatus = "";
-    if (myLibrary[i].check == false) {
-      readStatus = "Yes";
-    } else {
-      readStatus = "No";
-    }
+    let readStatus = myLibrary[i].check ? "No" : "Yes"; // Fix for displaying correct read status
     changeBut.innerHTML = readStatus;
 
     changeBut.addEventListener("click", function () {
