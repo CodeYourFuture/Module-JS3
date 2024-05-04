@@ -1,19 +1,33 @@
+/* Adjusted styles for the form group */
 .form-group {
-  width: 400px;
-  height: 300px;
-  align-self: left;
-  padding-left: 20px;
+  max-width: 400px;
+  /* Changed width to max-width for responsiveness */
+  margin: 0 auto;
+  /* Center the form group */
+  padding: 20px;
 }
 
+/* Adjusted styles for buttons */
 .btn {
-  display: block;
+  display: inline-block;
+  /* Changed display to inline-block for buttons to appear inline */
+  margin-right: 10px;
+  /* Added margin-right for spacing between buttons */
 }
 
+/* Adjusted styles for form-check-label */
 .form-check-label {
+  display: inline-block;
+  /* Changed display to inline-block for checkbox label */
   padding-left: 20px;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 20px 5px 0;
+  /* Adjusted margin for spacing */
 }
 
+/* Adjusted styles for the add new book button */
 button.btn-info {
-  margin: 20px;
+  margin: 20px auto;
+  /* Center the button */
+  display: block;
+  /* Added display: block for full-width button */
 }
