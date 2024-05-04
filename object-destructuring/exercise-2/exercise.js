@@ -74,7 +74,7 @@ let hogwarts = [
 // Task 1:
 console.log("Task 1:");
 let GryffindorMembers = hogwarts.filter(({ house }) => house === "Gryffindor");
-GryffindorMembers.forEach(({ firstName, lastName }) => {
+GryffindorMembers.forEach(({'firstName, lastName'}) => {
   console.log('${firstName} ${lastName}');
 });
 
