@@ -75,7 +75,7 @@ function render() {
     changeBut.id = i;
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
-    let readStatus = myLibrary[i].check ? "No" : "Yes"; // Fix for displaying correct read status
+    let readStatus = myLibrary[i].check ? "No" : "Yes"; 
     changeBut.innerHTML = readStatus;
 
     changeBut.addEventListener("click", function () {
@@ -84,12 +84,12 @@ function render() {
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
-    delButton.id = i + 5;
-    cell5.appendChild(delButton); // Changed from 'delBut'
-    delButton.className = "btn btn-warning"; // Changed from 'delBut'
-    delButton.innerHTML = "Delete"; // Changed from 'delBut'
-    delButton.addEventListener("click", function () { // Fixed event listener name
+    let delBut = document.createElement("button");
+    delBut.id = i + 5;
+    cell5.appendChild(delBut); 
+    delBut.className = "btn btn-warning"; 
+    delBut.innerHTML = "Delete"; 
+    delBut.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
